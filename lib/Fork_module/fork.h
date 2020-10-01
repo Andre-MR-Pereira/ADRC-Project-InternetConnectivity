@@ -1,4 +1,4 @@
-#define _GRAPH_H
+#define _FORK_H
 
 typedef struct Node List;
 
