@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.c" "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/ISPs.c.o"
   "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/main.c" "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

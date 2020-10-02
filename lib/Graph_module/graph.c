@@ -1,4 +1,4 @@
-#include "fork.h"
+#include "graph.h"
 
 Fork *create_fork(){
 

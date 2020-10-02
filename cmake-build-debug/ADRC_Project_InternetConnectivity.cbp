@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/main.c">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
