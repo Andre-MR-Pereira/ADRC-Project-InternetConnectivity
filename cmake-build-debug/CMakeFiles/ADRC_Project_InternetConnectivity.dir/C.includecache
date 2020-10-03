@@ -6,19 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
+/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.c
 graph.h
 /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+stdlib.h
+-
 stdio.h
 -
 
-/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
-
-/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/main.c
-stdio.h
--
-lib/Graph_module/ISPs.h
-/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
-lib/Graph_module/graph.h
 /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
 

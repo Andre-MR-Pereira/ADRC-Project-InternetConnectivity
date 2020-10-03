@@ -64,11 +64,15 @@ void free_node_list(List** ISP_graph,int max_node_value){
 void print_graph(List** ISP_graph,int max_node_value){
     List* node;
 
-    for(int i=0;i<max_node_value-1;i++){
+    for(int i=0;i<max_node_value;i++){
         node=ISP_graph[i];
-        while(node!=NULL){
-            printf("Lista de %d: %d||%c\n",i+1,node->vertices,node->edges);
-            node = (node->next==NULL) ? NULL : node->next;
+        if(node!=NULL){
+            printf("Lista de %d:",i+1);
+            while(node!=NULL){
+                printf(" %d||%c ;",node->vertices,node->edges);
+                node = (node->next==NULL) ? NULL : node->next;
+            }
+            printf("\n");
         }
     }
 }
