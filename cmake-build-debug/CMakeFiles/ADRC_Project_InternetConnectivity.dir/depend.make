@@ -10,10 +10,15 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Search.c.o: ..
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Search.c.o: ../lib/Graph_module/Stacks.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Search.c.o: ../lib/Graph_module/graph.h
 
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Stacks.c.o: ../lib/Graph_module/Stacks.c
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Stacks.c.o: ../lib/Graph_module/Stacks.h
+
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/graph.c.o: ../lib/Graph_module/graph.c
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/graph.c.o: ../lib/Graph_module/graph.h
 
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Graph_module/ISPs.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Graph_module/Search.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Graph_module/Stacks.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Graph_module/graph.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../main.c
 

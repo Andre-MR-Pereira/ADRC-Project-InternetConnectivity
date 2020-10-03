@@ -19,14 +19,14 @@ List** read_ISP(FILE *fp_preview,FILE *fp,int *max_node_value){
         ISP_graph=fill_ISP(ISP_graph,tail,head,mode);
     }
 
-    print_graph(ISP_graph,*max_node_value);
+    // print_graph(ISP_graph,*max_node_value);
 
     return ISP_graph;
 }
 
 FILE* open_ISP(FILE* file_pointer){
 
-    file_pointer=fopen("../lib/Assets/pdf_example.txt","r");
+    file_pointer=fopen("../lib/Assets/ex.txt","r");
     if (file_pointer == NULL) {
         return (FILE *) EXIT_FAILURE;
     }

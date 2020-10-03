@@ -88,6 +88,12 @@
 		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.h">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
+		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
 		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.c">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
