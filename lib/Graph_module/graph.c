@@ -6,45 +6,37 @@
 List** create_graph(int max_node_value){
     List ** ISP_graph;
 
-    ISP_graph=(List **)malloc((max_node_value-1)*sizeof(struct List*));
+    ISP_graph=(List **)malloc((max_node_value)*sizeof(struct List*));
     if(ISP_graph==NULL){
-        return EXIT_FAILURE;
+        return (List **) EXIT_FAILURE;
     }
-    for(int i=0;i<max_node_value-1;i++){
+    for(int i=0;i<max_node_value;i++){
         ISP_graph[i]=initNode();
     }
     return ISP_graph;
 }
 
-List** fill_ISP(List** ISP_graph,int tail, int head,int mode){
+List** fill_ISP(List** ISP_graph,int tail, int head,char mode){
     List* new_node;
-    char node_mode;
 
     new_node=(List*)malloc(sizeof(struct Node));
     if(new_node==NULL){
-        return EXIT_FAILURE;
+        return (List **) EXIT_FAILURE;
     }
     new_node->vertices=head;
-    switch (mode) {
-        case 1:
-            node_mode='A';
-            break;
-        case 2:
-            node_mode='B';
-            break;
-        case 3:
-            node_mode='C';
-            break;
-        default:
-            return EXIT_FAILURE;
-    }
-    new_node->edges=node_mode;
+    new_node->edges=mode;
     ISP_graph[tail-1]=insertHeadList(ISP_graph[tail-1],new_node);
+
     return ISP_graph;
 }
 
 List* initNode(void){
     return NULL;
+}
+
+void free_ISP(List** ISP_graph,int max_node_value){
+    free_node_list(ISP_graph,max_node_value);
+    free(ISP_graph);
 }
 
 List* insertHeadList(List* next, List* item) {
@@ -57,6 +49,18 @@ List* insertHeadList(List* next, List* item) {
     return new;
 }
 
+void free_node_list(List** ISP_graph,int max_node_value){
+    List* next;
+    List* aux;
+
+    for(int i=0;i<max_node_value;i++){
+        for(aux=ISP_graph[i];aux!=NULL;aux=next){
+            next=aux->next;
+            free(aux);
+        }
+    }
+}
+
 void print_graph(List** ISP_graph,int max_node_value){
     List* node;
 
@@ -67,6 +71,72 @@ void print_graph(List** ISP_graph,int max_node_value){
             node = (node->next==NULL) ? NULL : node->next;
         }
     }
+}
 
-    return;
+void remove_node(List** ISP_graph,int ISP_vertice,int node_vertice){
+    List* aux=ISP_graph[ISP_vertice-1];
+    if(aux==NULL){
+        return;
+    }
+    List* next=aux->next;
+
+    if(next!=NULL){
+        for(aux=ISP_graph[ISP_vertice-1];aux!=NULL;aux=next){
+            if(next->vertices==node_vertice){
+                aux->next=next->next;
+                free(next);
+                break;
+            }
+            next=aux->next;
+        }
+    } else{
+        if(aux->vertices==node_vertice){
+            ISP_graph[ISP_vertice-1]=NULL;
+            free(aux);
+        }
+    }
+
+
+    aux=ISP_graph[node_vertice-1];
+    if(aux==NULL){
+        return;
+    }
+    next=aux->next;
+
+    if(next!=NULL){
+        for(aux=ISP_graph[node_vertice-1];aux!=NULL;aux=next){
+            if(next->vertices==ISP_vertice){
+                aux->next=next->next;
+                free(next);
+                break;
+            }
+            next=aux->next;
+        }
+    } else{
+        if(aux->vertices==ISP_vertice){
+            ISP_graph[node_vertice-1]=NULL;
+            free(aux);
+        }
+    }
+}
+
+List* find_node(List** ISP_graph,int ISP_vertice,int node_vertice){
+    List* aux=ISP_graph[ISP_vertice-1];
+    if(aux==NULL){
+        return NULL;
+    }
+    List* next=aux->next;
+
+    if(next!=NULL){
+        for(aux=ISP_graph[ISP_vertice-1];aux!=NULL;aux=next){
+            if(next->vertices==node_vertice){
+                return next;
+            }
+            next=aux->next;
+        }
+    } else{
+        if(aux->vertices==node_vertice){
+            return aux;
+        }
+    }
 }

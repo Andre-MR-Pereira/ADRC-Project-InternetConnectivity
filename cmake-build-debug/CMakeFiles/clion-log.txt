@@ -1,4 +1,4 @@
-/usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity
+/usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity"
 -- The C compiler identification is GNU 9.3.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc - works
@@ -8,4 +8,4 @@
 -- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug
+-- Build files have been written to: /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1Âºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug
