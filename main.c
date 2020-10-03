@@ -6,7 +6,6 @@
 int main(int argc,char const *argv[]) {
     FILE *fp_preview = NULL,*fp =NULL;
     List** ISP_graph=NULL;
-    List* teste;
     int max_node_value=1;
 
     fp_preview=open_ISP(fp_preview);
