@@ -72,18 +72,7 @@ Stack** push_LIFO(Stack** LIFO,Stack* new){
     LIFO[1] = new;
     return LIFO;
 }
-/*
-int remove_LIFO(Stack** LIFO){
-    int node= LIFO[0]->node;
-    Stack* aux = LIFO[0];
-    if(LIFO[0] == NULL) return LIFO[0];
-    else{
-        LIFO[0] = LIFO[0]->next;
-        free(aux);
-        return node;
-    }
-}
-*/
+
 int remove_LIFO(Stack** LIFO){
     return remove_FIFO(&LIFO[0]);
 }
