@@ -170,6 +170,33 @@ lib/Graph_module/ISPs.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/ISPs.c.s
 .PHONY : lib/Graph_module/ISPs.c.s
 
+lib/Graph_module/graph.o: lib/Graph_module/graph.c.o
+
+.PHONY : lib/Graph_module/graph.o
+
+# target to build an object file
+lib/Graph_module/graph.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/graph.c.o
+.PHONY : lib/Graph_module/graph.c.o
+
+lib/Graph_module/graph.i: lib/Graph_module/graph.c.i
+
+.PHONY : lib/Graph_module/graph.i
+
+# target to preprocess a source file
+lib/Graph_module/graph.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/graph.c.i
+.PHONY : lib/Graph_module/graph.c.i
+
+lib/Graph_module/graph.s: lib/Graph_module/graph.c.s
+
+.PHONY : lib/Graph_module/graph.s
+
+# target to generate assembly for a file
+lib/Graph_module/graph.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/graph.c.s
+.PHONY : lib/Graph_module/graph.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -209,6 +236,9 @@ help:
 	@echo "... lib/Graph_module/ISPs.o"
 	@echo "... lib/Graph_module/ISPs.i"
 	@echo "... lib/Graph_module/ISPs.s"
+	@echo "... lib/Graph_module/graph.o"
+	@echo "... lib/Graph_module/graph.i"
+	@echo "... lib/Graph_module/graph.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

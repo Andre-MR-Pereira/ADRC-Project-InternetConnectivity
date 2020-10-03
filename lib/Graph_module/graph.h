@@ -1,17 +1,18 @@
-#define _FORK_H
+#ifndef _GRAPH_H
+#define _GRAPH_H
 
 typedef struct Node List;
 
 struct Node {
-    int index;
-    int column;
-    int line;
-    int weight;
+    int vertices;
+    char edges;
     List *next;
 };
 
-typedef struct fork {
-    int vertices;
-    int edges;
-    List **list_adj;
-} Fork;
+List** create_graph(int max_node_value);
+List** fill_ISP(List** ISP_graph,int tail,int head,int mode);
+List* initNode(void);
+List* insertHeadList(List* next,List* item);
+void print_graph(List** ISP_graph,int max_node_value);
+
+#endif
