@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
 graph.h
 /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
@@ -21,4 +22,15 @@ lib/Graph_module/ISPs.h
 /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
 lib/Graph_module/graph.h
 /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+=======
+/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.c
+graph.h
+/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+stdlib.h
+-
+stdio.h
+-
+
+/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+>>>>>>> f43c074ccbeab8ba5d22a6ad14a93dd56ef18e93
 
