@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "lib/Graph_module/ISPs.h"
+#include "lib/Graph_module/Stacks.h"
 
 int main(int argc,char const *argv[]) {
     FILE *fp_preview,*fp;
