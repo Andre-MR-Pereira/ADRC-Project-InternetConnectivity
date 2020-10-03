@@ -10,6 +10,10 @@ struct _Stack {
     struct _Stack* next;
 };
 
+int get_node(Stack* a){
+    return a->node;
+}
+
 Stack* create_element(int node) {
     Stack *ele = (Stack *) malloc(sizeof(Stack));
     ele->node = node;

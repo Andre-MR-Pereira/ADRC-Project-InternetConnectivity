@@ -21,7 +21,7 @@ int* BFS(List** graph, int size, int start_node){
     int i = 0;
     discovered[start_node] = 0;
     while (FIFO != NULL){
-        List *aux = graph[FIFO->node];
+        List *aux = graph[];
         while (List* aux != NULL) {
 
         }

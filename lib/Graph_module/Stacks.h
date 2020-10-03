@@ -6,6 +6,7 @@
 #define MAIN_C_STACKS_H
 typedef struct _Stack Stack;
 
+int get_node(Stack* );
 Stack* create_element(int);
 Stack* push_FIFO(Stack*,Stack*);
 int remove_FIFO(Stack**);
