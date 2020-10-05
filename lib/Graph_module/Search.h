@@ -5,5 +5,6 @@
 #include "Stacks.h"
 
 int* BFS(List** , int , int );
+int* DFS(List** , int , int );
 
 #endif //SEARCH_H
