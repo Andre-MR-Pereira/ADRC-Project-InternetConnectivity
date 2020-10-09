@@ -8,6 +8,7 @@
 #include "Stacks.h"
 
 int* BFS_C(List**,int,int);
+int* DFS_C(List**,int,int);
 
 
 

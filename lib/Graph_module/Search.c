@@ -59,7 +59,7 @@ int* DFS(List** graph, int size, int start_node){
     int count = 1;
     discovered[start_node-1] = true;
     while (LIFO != NULL){
-        auxS = LIFO;
+        auxS = pull_LIFO(&LIFO);
         arestas = graph[get_node(auxS)-1];
         while (arestas != NULL) {
             if(discovered[arestas->vertices-1] == false){
@@ -71,7 +71,7 @@ int* DFS(List** graph, int size, int start_node){
             arestas = arestas->next;
         }
         if(count == size) break; //duvidoso
-        remove_LIFO(&LIFO);
+        free(auxS);
     }
 
     erase_LIFO(LIFO);
