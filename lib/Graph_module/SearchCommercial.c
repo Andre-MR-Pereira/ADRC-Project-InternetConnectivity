@@ -55,9 +55,10 @@ int* BFS_C(List** graph, int size, int start_node){
 
                 if (edge<i+1 || (edge==i+1 && i!=1)){
                     count++;
-                    discovered[vertice] = edgec;
+
                     FIFO[edge-1] = push_FIFO(FIFO[edge-1], create_element(arestas->vertices));
                     if(edge!=2) {
+                        discovered[vertice] = edgec;
                         parent[vertice] = get_node(auxS);
                     }
                 }
@@ -133,9 +134,9 @@ int* DFS_C(List** graph, int size, int start_node){
 
                 if (edge<i+1 || (edge==i+1 && i!=1)){
                     count++;
-                    discovered[vertice] = edgec;
                     LIFO[edge-1] = push_LIFO(LIFO[edge-1], create_element(arestas->vertices));
                     if(edge!=2) {
+                        discovered[vertice] = edgec;
                         parent[vertice] = get_node(auxS);
                     }
                 }

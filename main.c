@@ -20,7 +20,7 @@ int main(int argc,char const *argv[]) {
     close_ISP(fp_preview);  //fecha o ficheiro apos ser analisado
     close_ISP(fp);  //fecha o ficheiro apos ser analisado
 
-    parent = DFS(ISP_graph, max_node_value, 1);
+    parent = BFS_C(ISP_graph, max_node_value, 1);
     for (int i = 0; i < max_node_value; ++i)
         printf("%d vem de %d\n", i+1, parent[i]);
 
