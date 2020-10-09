@@ -65,9 +65,6 @@ int* BFS_C(List** graph, int size, int start_node){
 
 
                 arestas = arestas->next;
-                print_FIFO(FIFO[2]);
-                print_FIFO(FIFO[1]);
-                print_FIFO(FIFO[0]);
 
 
                 printf("\n");
@@ -118,6 +115,7 @@ int* DFS_C(List** graph, int size, int start_node){
 
             if (discovered[node]>'1'+i){
                 remove_LIFO(&LIFO[i]);
+                free(auxS);
                 continue;
             }
 
@@ -144,7 +142,6 @@ int* DFS_C(List** graph, int size, int start_node){
 
                 arestas = arestas->next;
 
-                printf("\n");
             }
             if(count == size) break; //duvidoso
             free(auxS);
