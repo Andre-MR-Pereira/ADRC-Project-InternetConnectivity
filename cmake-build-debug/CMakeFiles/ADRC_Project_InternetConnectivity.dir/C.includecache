@@ -6,41 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
-graph.h
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
-stdio.h
--
-
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.c
-Search.h
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.h
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.c
+SearchCommercial.h
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.h
 stdlib.h
 -
 stdio.h
 -
-stdbool.h
--
 
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.h
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.h
 graph.h
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
 Stacks.h
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
 
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
 
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
-
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/main.c
-stdio.h
--
-stdlib.h
--
-lib/Graph_module/ISPs.h
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
-lib/Graph_module/graph.h
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
-lib/Graph_module/Search.h
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.h
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
 
