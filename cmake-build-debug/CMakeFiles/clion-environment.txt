@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ToolSet: Ubuntu 20.04.1 LTS (local)@C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps\ubuntu.exe
+=======
+ToolSet: Ubuntu 20.04.1 LTS (local)@C:\Users\joped\AppData\Local\Microsoft\WindowsApps\ubuntu2004.exe
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d
 Options: 
 
 Options:

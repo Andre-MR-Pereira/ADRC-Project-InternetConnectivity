@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 /usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity"
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1Âºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug
+=======
+/usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d

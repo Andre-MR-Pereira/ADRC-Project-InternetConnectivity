@@ -68,10 +68,17 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity"
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug"
+=======
+CMAKE_SOURCE_DIR = /mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +107,15 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles" "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles" 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles /mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles 0
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d
 .PHONY : all
 
 # The main clean target
@@ -197,6 +210,60 @@ lib/Graph_module/Search.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Search.c.s
 .PHONY : lib/Graph_module/Search.c.s
 
+lib/Graph_module/SearchCommercial.o: lib/Graph_module/SearchCommercial.c.o
+
+.PHONY : lib/Graph_module/SearchCommercial.o
+
+# target to build an object file
+lib/Graph_module/SearchCommercial.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/SearchCommercial.c.o
+.PHONY : lib/Graph_module/SearchCommercial.c.o
+
+lib/Graph_module/SearchCommercial.i: lib/Graph_module/SearchCommercial.c.i
+
+.PHONY : lib/Graph_module/SearchCommercial.i
+
+# target to preprocess a source file
+lib/Graph_module/SearchCommercial.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/SearchCommercial.c.i
+.PHONY : lib/Graph_module/SearchCommercial.c.i
+
+lib/Graph_module/SearchCommercial.s: lib/Graph_module/SearchCommercial.c.s
+
+.PHONY : lib/Graph_module/SearchCommercial.s
+
+# target to generate assembly for a file
+lib/Graph_module/SearchCommercial.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/SearchCommercial.c.s
+.PHONY : lib/Graph_module/SearchCommercial.c.s
+
+lib/Graph_module/Stacks.o: lib/Graph_module/Stacks.c.o
+
+.PHONY : lib/Graph_module/Stacks.o
+
+# target to build an object file
+lib/Graph_module/Stacks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Stacks.c.o
+.PHONY : lib/Graph_module/Stacks.c.o
+
+lib/Graph_module/Stacks.i: lib/Graph_module/Stacks.c.i
+
+.PHONY : lib/Graph_module/Stacks.i
+
+# target to preprocess a source file
+lib/Graph_module/Stacks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Stacks.c.i
+.PHONY : lib/Graph_module/Stacks.c.i
+
+lib/Graph_module/Stacks.s: lib/Graph_module/Stacks.c.s
+
+.PHONY : lib/Graph_module/Stacks.s
+
+# target to generate assembly for a file
+lib/Graph_module/Stacks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Stacks.c.s
+.PHONY : lib/Graph_module/Stacks.c.s
+
 lib/Graph_module/graph.o: lib/Graph_module/graph.c.o
 
 .PHONY : lib/Graph_module/graph.o
@@ -266,6 +333,12 @@ help:
 	@echo "... lib/Graph_module/Search.o"
 	@echo "... lib/Graph_module/Search.i"
 	@echo "... lib/Graph_module/Search.s"
+	@echo "... lib/Graph_module/SearchCommercial.o"
+	@echo "... lib/Graph_module/SearchCommercial.i"
+	@echo "... lib/Graph_module/SearchCommercial.s"
+	@echo "... lib/Graph_module/Stacks.o"
+	@echo "... lib/Graph_module/Stacks.i"
+	@echo "... lib/Graph_module/Stacks.s"
 	@echo "... lib/Graph_module/graph.o"
 	@echo "... lib/Graph_module/graph.i"
 	@echo "... lib/Graph_module/graph.s"

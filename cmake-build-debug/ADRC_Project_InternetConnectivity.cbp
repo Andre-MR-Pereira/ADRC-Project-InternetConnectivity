@@ -8,6 +8,7 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
+<<<<<<< HEAD
 				<Option working_dir="/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
@@ -40,6 +41,40 @@
 			<Target title="ADRC_Project_InternetConnectivity">
 				<Option output="/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/ADRC_Project_InternetConnectivity" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug"/>
+=======
+				<Option working_dir="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ADRC_Project_InternetConnectivity">
+				<Option output="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/ADRC_Project_InternetConnectivity" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug"/>
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -50,6 +85,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4\ ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 ADRC_Project_InternetConnectivity"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4\ ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4\ ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -59,6 +95,17 @@
 			<Target title="ADRC_Project_InternetConnectivity/fast">
 				<Option output="/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/ADRC_Project_InternetConnectivity" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 ADRC_Project_InternetConnectivity"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ADRC_Project_InternetConnectivity/fast">
+				<Option output="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/ADRC_Project_InternetConnectivity" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug"/>
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -69,6 +116,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4\ ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 ADRC_Project_InternetConnectivity/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4\ ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/ASUS/Documents/faculdade/4\ ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -98,6 +146,49 @@
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/CMakeLists.txt">
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 ADRC_Project_InternetConnectivity/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/main.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/CMakeLists.txt">
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -21,82 +21,84 @@ Stack* create_element(int node) {
     return ele;
 }
 
-Stack* push_FIFO(Stack* FIFO,Stack* new){
-    new->next=FIFO;
-    FIFO = new;
-    return FIFO;
-}
-
-int remove_FIFO(Stack** FIFO){
-    int node= (*FIFO)->node;
-    Stack* aux = *FIFO;
-    if(*FIFO == NULL) return 0;
-    else{
-        *FIFO = (*FIFO)->next;
-        free(aux);
-        return node;
-    }
-}
-
-Stack* pull_FIFO(Stack** FIFO){
-    Stack* node= (*FIFO);
-    if(*FIFO == NULL) return *FIFO;
-    else{
-        *FIFO = (*FIFO)->next;
-        return node;
-    }
-}
-
-Stack* erase_FIFO(Stack* FIFO){
-    Stack *aux = NULL;
-    while(FIFO != NULL){
-        aux=FIFO;
-        FIFO=FIFO->next;
-        free(aux);
-    }
-    return FIFO;
-}
-
-void print_FIFO(Stack* FIFO){
-    while(FIFO != NULL) {
-        printf("%i ", FIFO->node);
-        FIFO = FIFO->next;
-    }
-    printf("\n");
-}
-Stack** create_LIFO(Stack* new){
-
-    Stack** LIFO=(Stack **) malloc(sizeof(Stack*)*2);
-    LIFO[0] = new;
-    LIFO[1] = new;
-    return LIFO;
-}
-Stack** push_LIFO(Stack** LIFO,Stack* new){
-    LIFO[1]->next=new;
-    LIFO[1] = new;
+Stack* push_LIFO(Stack* LIFO,Stack* new){
+    new->next=LIFO;
+    LIFO = new;
     return LIFO;
 }
 
 int remove_LIFO(Stack** LIFO){
-    return remove_FIFO(&LIFO[0]);
+    if(*LIFO == NULL) return 0;
+    else{
+        int node= (*LIFO)->node;
+        Stack* aux = *LIFO;
+        *LIFO = (*LIFO)->next;
+        free(aux);
+        return node;
+    }
 }
 
 Stack* pull_LIFO(Stack** LIFO){
-    return pull_FIFO(&LIFO[0]);
+    Stack* node= (*LIFO);
+    if(*LIFO == NULL) return *LIFO;
+    else{
+        *LIFO = (*LIFO)->next;
+        return node;
+    }
 }
 
-Stack** erase_LIFO(Stack** LIFO){
-    LIFO[0]= erase_FIFO(LIFO[0]);
-    free(LIFO);
+Stack* erase_LIFO(Stack* LIFO){
+    Stack *aux = NULL;
+    while(LIFO != NULL){
+        aux=LIFO;
+        LIFO=LIFO->next;
+        free(aux);
+    }
+    return LIFO;
+}
+
+void print_LIFO(Stack* LIFO){
+    while(LIFO != NULL) {
+        printf("%i ", LIFO->node);
+        LIFO = LIFO->next;
+    }
+    printf("\n");
+}
+
+
+Stack** create_FIFO(Stack* new){
+    Stack** FIFO=(Stack **) malloc(sizeof(Stack*)*2);
+    FIFO[0] = new;
+    FIFO[1] = new;
+    return FIFO;
+}
+
+Stack** push_FIFO(Stack** FIFO,Stack* new){
+    FIFO[1]->next=new;
+    FIFO[1] = new;
+    return FIFO;
+}
+
+int remove_FIFO(Stack** FIFO){
+    int node = remove_LIFO(&FIFO[0]);
+    if(FIFO[0] == NULL) FIFO[1] = NULL;
+    return node;
+}
+
+Stack* pull_FIFO(Stack** FIFO){
+    return pull_LIFO(&FIFO[0]);
+}
+
+Stack** erase_FIFO(Stack** FIFO){
+    FIFO[0]= erase_LIFO(FIFO[0]);
+    free(FIFO);
     return NULL;
 }
 
-void print_LIFO(Stack** LIFO){
-    if (LIFO==NULL) return;
-    print_FIFO(LIFO[0]);
+void print_FIFO(Stack** FIFO){
+    if (FIFO==NULL) return;
+    print_LIFO(FIFO[0]);
 }
-
-
 
 //
 

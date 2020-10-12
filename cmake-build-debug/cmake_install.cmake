@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity
+=======
+# Install script for directory: /mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +49,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

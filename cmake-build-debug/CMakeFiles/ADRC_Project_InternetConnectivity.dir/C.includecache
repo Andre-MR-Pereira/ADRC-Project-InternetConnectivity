@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.c
 Search.h
 /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.h
@@ -13,6 +14,11 @@ graph.h
 /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
 Stacks.h
 /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+=======
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.c
+SearchCommercial.h
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.h
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d
 stdlib.h
 -
 stdio.h
@@ -24,5 +30,17 @@ stdbool.h
 
 /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
 
+<<<<<<< HEAD
 /mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+=======
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.h
+graph.h
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+Stacks.h
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+
+/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+>>>>>>> 1f933ec5819ff28856030b645419d4bdb658d57d
 
