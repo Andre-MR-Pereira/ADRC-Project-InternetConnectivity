@@ -51,7 +51,6 @@ bool connected(List** graph,int* top_p, int size,int* list_top,int count_p,int t
         }
 
         remove_FIFO(FIFO);
-        print_FIFO(FIFO);
     }
 
     erase_FIFO(FIFO);

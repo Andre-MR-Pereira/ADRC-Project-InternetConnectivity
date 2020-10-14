@@ -38,7 +38,7 @@ List** read_ISP(FILE *fp_preview,FILE *fp,int *max_node_value,int **top_f,int **
         else if ((*top_f)[i]==1) (*list_top)[u++]=i+1;
     }
 
-     print_graph(ISP_graph,*max_node_value);
+     //print_graph(ISP_graph,*max_node_value);
 
     return ISP_graph;
 }
