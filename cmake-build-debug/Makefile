@@ -143,6 +143,33 @@ ADRC_Project_InternetConnectivity/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/build
 .PHONY : ADRC_Project_InternetConnectivity/fast
 
+lib/Graph_module/Commercialconnected.o: lib/Graph_module/Commercialconnected.c.o
+
+.PHONY : lib/Graph_module/Commercialconnected.o
+
+# target to build an object file
+lib/Graph_module/Commercialconnected.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Commercialconnected.c.o
+.PHONY : lib/Graph_module/Commercialconnected.c.o
+
+lib/Graph_module/Commercialconnected.i: lib/Graph_module/Commercialconnected.c.i
+
+.PHONY : lib/Graph_module/Commercialconnected.i
+
+# target to preprocess a source file
+lib/Graph_module/Commercialconnected.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Commercialconnected.c.i
+.PHONY : lib/Graph_module/Commercialconnected.c.i
+
+lib/Graph_module/Commercialconnected.s: lib/Graph_module/Commercialconnected.c.s
+
+.PHONY : lib/Graph_module/Commercialconnected.s
+
+# target to generate assembly for a file
+lib/Graph_module/Commercialconnected.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Commercialconnected.c.s
+.PHONY : lib/Graph_module/Commercialconnected.c.s
+
 lib/Graph_module/ISPs.o: lib/Graph_module/ISPs.c.o
 
 .PHONY : lib/Graph_module/ISPs.o
@@ -314,6 +341,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ADRC_Project_InternetConnectivity"
+	@echo "... lib/Graph_module/Commercialconnected.o"
+	@echo "... lib/Graph_module/Commercialconnected.i"
+	@echo "... lib/Graph_module/Commercialconnected.s"
 	@echo "... lib/Graph_module/ISPs.o"
 	@echo "... lib/Graph_module/ISPs.i"
 	@echo "... lib/Graph_module/ISPs.s"

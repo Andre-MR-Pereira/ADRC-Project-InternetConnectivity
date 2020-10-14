@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Commercialconnected.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Commercialconnected.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.c">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>

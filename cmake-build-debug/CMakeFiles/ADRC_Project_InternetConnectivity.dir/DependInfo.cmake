@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Commercialconnected.c" "/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Commercialconnected.c.o"
   "/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.c" "/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/ISPs.c.o"
   "/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.c" "/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Search.c.o"
   "/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.c" "/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/SearchCommercial.c.o"

@@ -3,6 +3,7 @@
 //
 #include "SearchCommercial.h"
 
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -154,3 +155,4 @@ int* DFS_C(List** graph, int size, int start_node){
     free(discovered);
     return parent;
 }
+

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "ADRC_Project_InternetConnectivity"
   "ADRC_Project_InternetConnectivity.pdb"
+  "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Commercialconnected.c.o"
   "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/ISPs.c.o"
   "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Search.c.o"
   "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/SearchCommercial.c.o"
