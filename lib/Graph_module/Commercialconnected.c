@@ -17,6 +17,7 @@ bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_
     }
     return true;
 }
+
 bool connected(List** graph,int* top_p, int size,int* list_top,int count_p,int true_size){
     if (!provider_network(graph,top_p,size,list_top,count_p)) return false;
     int start_node = list_top[0];
@@ -36,14 +37,13 @@ bool connected(List** graph,int* top_p, int size,int* list_top,int count_p,int t
         auxS = FIFO[0];
         arestas = graph[get_node(auxS)-1];
         while (arestas != NULL) {
-            if((discovered[arestas->vertices-1] == false && (arestas->edges=='1'))||(start_node==get_node(auxS) && arestas->edges=='2')){
+            if(discovered[arestas->vertices-1] == false && ((arestas->edges=='1')||(top_p[arestas->vertices-1] && arestas->edges=='2'))){
                     count++;
                     discovered[arestas->vertices - 1] = true;
                     FIFO = push_FIFO(FIFO, create_element(arestas->vertices));
             }
             arestas = arestas->next;
         }
-
         if(count == true_size){
             erase_FIFO(FIFO);
             free(discovered);
