@@ -20,7 +20,7 @@ int main(int argc,char const *argv[]) {
     close_ISP(fp_preview);  //fecha o ficheiro apos ser analisado
     close_ISP(fp);  //fecha o ficheiro apos ser analisado
 
-    printf("%d",connected(ISP_graph,top_f,max_node_value,list_top,count_f,true_size));
+    printf("%d, %d",c_connected(ISP_graph,top_f,max_node_value,list_top,count_f,true_size), g_connected(ISP_graph, max_node_value, list_top, true_size));
     free(parent);
     free(top_f);
     free(list_top);

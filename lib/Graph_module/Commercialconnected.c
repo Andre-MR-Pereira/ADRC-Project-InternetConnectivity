@@ -1,8 +1,6 @@
-//
-// Created by joped on 14/10/2020.
-//
 
 #include "Commercialconnected.h"
+
 bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_p){
     List* arestas = NULL;
     int count_aux;
@@ -18,7 +16,7 @@ bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_
     return true;
 }
 
-bool connected(List** graph,int* top_p, int size,int* list_top,int count_p,int true_size){
+bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int true_size){
     if (!provider_network(graph,top_p,size,list_top,count_p)) return false;
     int start_node = list_top[0];
     bool *discovered = (bool*)malloc(size*sizeof(bool));
@@ -56,4 +54,25 @@ bool connected(List** graph,int* top_p, int size,int* list_top,int count_p,int t
     erase_FIFO(FIFO);
     free(discovered);
     return false;
+}
+
+bool g_connected(List** graph, int size, int* list_top, int true_size){
+    int *parent = NULL;
+    bool res = true;
+    int count = 1;
+
+    parent = BFS(graph, size, list_top[0]);
+
+    for (int i = 0; i < size; ++i) {
+        if(parent[i] != -1) {
+            count++;
+        }
+    }
+
+    if(count != true_size)
+        res = false;
+
+    free(parent);
+
+    return res;
 }
