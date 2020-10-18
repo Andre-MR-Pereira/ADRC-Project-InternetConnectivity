@@ -4,8 +4,8 @@
 
 #ifndef ADRC_PROJECT_INTERNETCONNECTIVITY_SEARCHCOMMERCIAL_H
 #define ADRC_PROJECT_INTERNETCONNECTIVITY_SEARCHCOMMERCIAL_H
-#include "graph.h"
-#include "Stacks.h"
+#include "../Graph_module/graph.h"
+#include "../Graph_module/Stacks.h"
 
 int* BFS_C(List**,int,int);
 int* DFS_C(List**,int,int);

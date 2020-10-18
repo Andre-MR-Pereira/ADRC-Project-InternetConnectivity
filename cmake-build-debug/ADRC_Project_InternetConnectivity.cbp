@@ -76,10 +76,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Commercialconnected.c">
+		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Commercialconnected.c">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
-		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Commercialconnected.h">
+		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Commercialconnected.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/SearchCommercial.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/SearchCommercial.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/biconnected.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/biconnected.h">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
 		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.c">
@@ -92,12 +104,6 @@
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
 		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.h">
-			<Option target="ADRC_Project_InternetConnectivity"/>
-		</Unit>
-		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.c">
-			<Option target="ADRC_Project_InternetConnectivity"/>
-		</Unit>
-		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/SearchCommercial.h">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
 		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.c">

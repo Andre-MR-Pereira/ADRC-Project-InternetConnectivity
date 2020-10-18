@@ -6,11 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.c
-ISPs.h
-/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Commercialconnected.h
+../Graph_module/graph.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+../Graph_module/Stacks.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+stdbool.h
+-
 stdlib.h
 -
+stdio.h
+-
+../Graph_module/Search.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.h
+
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/SearchCommercial.h
+../Graph_module/graph.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+../Graph_module/Stacks.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/biconnected.h
+stdbool.h
+-
+../Graph_module/Stacks.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+../Graph_module/graph.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
 
 /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
 graph.h
@@ -18,5 +40,31 @@ graph.h
 stdio.h
 -
 
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.h
+graph.h
 /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+Stacks.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/main.c
+stdio.h
+-
+stdlib.h
+-
+lib/Graph_module/ISPs.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
+lib/Graph_module/graph.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+lib/Graph_module/Search.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Search.h
+lib/Algorithm_modules/SearchCommercial.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/SearchCommercial.h
+lib/Algorithm_modules/Commercialconnected.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Commercialconnected.h
+lib/Algorithm_modules/biconnected.h
+/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/biconnected.h
 

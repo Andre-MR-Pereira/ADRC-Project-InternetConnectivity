@@ -143,32 +143,86 @@ ADRC_Project_InternetConnectivity/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/build
 .PHONY : ADRC_Project_InternetConnectivity/fast
 
-lib/Graph_module/Commercialconnected.o: lib/Graph_module/Commercialconnected.c.o
+lib/Algorithm_modules/Commercialconnected.o: lib/Algorithm_modules/Commercialconnected.c.o
 
-.PHONY : lib/Graph_module/Commercialconnected.o
+.PHONY : lib/Algorithm_modules/Commercialconnected.o
 
 # target to build an object file
-lib/Graph_module/Commercialconnected.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Commercialconnected.c.o
-.PHONY : lib/Graph_module/Commercialconnected.c.o
+lib/Algorithm_modules/Commercialconnected.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.o
+.PHONY : lib/Algorithm_modules/Commercialconnected.c.o
 
-lib/Graph_module/Commercialconnected.i: lib/Graph_module/Commercialconnected.c.i
+lib/Algorithm_modules/Commercialconnected.i: lib/Algorithm_modules/Commercialconnected.c.i
 
-.PHONY : lib/Graph_module/Commercialconnected.i
+.PHONY : lib/Algorithm_modules/Commercialconnected.i
 
 # target to preprocess a source file
-lib/Graph_module/Commercialconnected.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Commercialconnected.c.i
-.PHONY : lib/Graph_module/Commercialconnected.c.i
+lib/Algorithm_modules/Commercialconnected.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.i
+.PHONY : lib/Algorithm_modules/Commercialconnected.c.i
 
-lib/Graph_module/Commercialconnected.s: lib/Graph_module/Commercialconnected.c.s
+lib/Algorithm_modules/Commercialconnected.s: lib/Algorithm_modules/Commercialconnected.c.s
 
-.PHONY : lib/Graph_module/Commercialconnected.s
+.PHONY : lib/Algorithm_modules/Commercialconnected.s
 
 # target to generate assembly for a file
-lib/Graph_module/Commercialconnected.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Commercialconnected.c.s
-.PHONY : lib/Graph_module/Commercialconnected.c.s
+lib/Algorithm_modules/Commercialconnected.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.s
+.PHONY : lib/Algorithm_modules/Commercialconnected.c.s
+
+lib/Algorithm_modules/SearchCommercial.o: lib/Algorithm_modules/SearchCommercial.c.o
+
+.PHONY : lib/Algorithm_modules/SearchCommercial.o
+
+# target to build an object file
+lib/Algorithm_modules/SearchCommercial.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/SearchCommercial.c.o
+.PHONY : lib/Algorithm_modules/SearchCommercial.c.o
+
+lib/Algorithm_modules/SearchCommercial.i: lib/Algorithm_modules/SearchCommercial.c.i
+
+.PHONY : lib/Algorithm_modules/SearchCommercial.i
+
+# target to preprocess a source file
+lib/Algorithm_modules/SearchCommercial.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/SearchCommercial.c.i
+.PHONY : lib/Algorithm_modules/SearchCommercial.c.i
+
+lib/Algorithm_modules/SearchCommercial.s: lib/Algorithm_modules/SearchCommercial.c.s
+
+.PHONY : lib/Algorithm_modules/SearchCommercial.s
+
+# target to generate assembly for a file
+lib/Algorithm_modules/SearchCommercial.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/SearchCommercial.c.s
+.PHONY : lib/Algorithm_modules/SearchCommercial.c.s
+
+lib/Algorithm_modules/biconnected.o: lib/Algorithm_modules/biconnected.c.o
+
+.PHONY : lib/Algorithm_modules/biconnected.o
+
+# target to build an object file
+lib/Algorithm_modules/biconnected.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.o
+.PHONY : lib/Algorithm_modules/biconnected.c.o
+
+lib/Algorithm_modules/biconnected.i: lib/Algorithm_modules/biconnected.c.i
+
+.PHONY : lib/Algorithm_modules/biconnected.i
+
+# target to preprocess a source file
+lib/Algorithm_modules/biconnected.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.i
+.PHONY : lib/Algorithm_modules/biconnected.c.i
+
+lib/Algorithm_modules/biconnected.s: lib/Algorithm_modules/biconnected.c.s
+
+.PHONY : lib/Algorithm_modules/biconnected.s
+
+# target to generate assembly for a file
+lib/Algorithm_modules/biconnected.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.s
+.PHONY : lib/Algorithm_modules/biconnected.c.s
 
 lib/Graph_module/ISPs.o: lib/Graph_module/ISPs.c.o
 
@@ -223,33 +277,6 @@ lib/Graph_module/Search.s: lib/Graph_module/Search.c.s
 lib/Graph_module/Search.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Search.c.s
 .PHONY : lib/Graph_module/Search.c.s
-
-lib/Graph_module/SearchCommercial.o: lib/Graph_module/SearchCommercial.c.o
-
-.PHONY : lib/Graph_module/SearchCommercial.o
-
-# target to build an object file
-lib/Graph_module/SearchCommercial.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/SearchCommercial.c.o
-.PHONY : lib/Graph_module/SearchCommercial.c.o
-
-lib/Graph_module/SearchCommercial.i: lib/Graph_module/SearchCommercial.c.i
-
-.PHONY : lib/Graph_module/SearchCommercial.i
-
-# target to preprocess a source file
-lib/Graph_module/SearchCommercial.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/SearchCommercial.c.i
-.PHONY : lib/Graph_module/SearchCommercial.c.i
-
-lib/Graph_module/SearchCommercial.s: lib/Graph_module/SearchCommercial.c.s
-
-.PHONY : lib/Graph_module/SearchCommercial.s
-
-# target to generate assembly for a file
-lib/Graph_module/SearchCommercial.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/SearchCommercial.c.s
-.PHONY : lib/Graph_module/SearchCommercial.c.s
 
 lib/Graph_module/Stacks.o: lib/Graph_module/Stacks.c.o
 
@@ -341,18 +368,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ADRC_Project_InternetConnectivity"
-	@echo "... lib/Graph_module/Commercialconnected.o"
-	@echo "... lib/Graph_module/Commercialconnected.i"
-	@echo "... lib/Graph_module/Commercialconnected.s"
+	@echo "... lib/Algorithm_modules/Commercialconnected.o"
+	@echo "... lib/Algorithm_modules/Commercialconnected.i"
+	@echo "... lib/Algorithm_modules/Commercialconnected.s"
+	@echo "... lib/Algorithm_modules/SearchCommercial.o"
+	@echo "... lib/Algorithm_modules/SearchCommercial.i"
+	@echo "... lib/Algorithm_modules/SearchCommercial.s"
+	@echo "... lib/Algorithm_modules/biconnected.o"
+	@echo "... lib/Algorithm_modules/biconnected.i"
+	@echo "... lib/Algorithm_modules/biconnected.s"
 	@echo "... lib/Graph_module/ISPs.o"
 	@echo "... lib/Graph_module/ISPs.i"
 	@echo "... lib/Graph_module/ISPs.s"
 	@echo "... lib/Graph_module/Search.o"
 	@echo "... lib/Graph_module/Search.i"
 	@echo "... lib/Graph_module/Search.s"
-	@echo "... lib/Graph_module/SearchCommercial.o"
-	@echo "... lib/Graph_module/SearchCommercial.i"
-	@echo "... lib/Graph_module/SearchCommercial.s"
 	@echo "... lib/Graph_module/Stacks.o"
 	@echo "... lib/Graph_module/Stacks.i"
 	@echo "... lib/Graph_module/Stacks.s"

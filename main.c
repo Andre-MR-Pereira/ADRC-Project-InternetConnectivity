@@ -4,8 +4,10 @@
 #include "lib/Graph_module/ISPs.h"
 #include "lib/Graph_module/graph.h"
 #include "lib/Graph_module/Search.h"
-#include "lib/Graph_module/SearchCommercial.h"
-#include "lib/Graph_module/Commercialconnected.h"
+#include "lib/Algorithm_modules/SearchCommercial.h"
+#include "lib/Algorithm_modules/Commercialconnected.h"
+#include "lib/Algorithm_modules/biconnected.h"
+
 
 int main(int argc,char const *argv[]) {
     FILE *fp_preview = NULL,*fp =NULL;
@@ -20,7 +22,8 @@ int main(int argc,char const *argv[]) {
     close_ISP(fp_preview);  //fecha o ficheiro apos ser analisado
     close_ISP(fp);  //fecha o ficheiro apos ser analisado
 
-    printf("%d, %d",c_connected(ISP_graph,top_f,max_node_value,list_top,count_f,true_size), g_connected(ISP_graph, max_node_value, list_top, true_size));
+    printf("%d, %d\n",c_connected(ISP_graph,top_f,max_node_value,list_top,count_f,true_size), g_connected(ISP_graph, max_node_value, list_top, true_size));
+    link_biconnected(ISP_graph, max_node_value);
     free(parent);
     free(top_f);
     free(list_top);

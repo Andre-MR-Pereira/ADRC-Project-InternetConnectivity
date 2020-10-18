@@ -1,12 +1,12 @@
 
 #ifndef ADRC_PROJECT_INTERNETCONNECTIVITY_COMMERCIALCONNECTED_H
 #define ADRC_PROJECT_INTERNETCONNECTIVITY_COMMERCIALCONNECTED_H
-#include "graph.h"
-#include "Stacks.h"
+#include "../Graph_module/graph.h"
+#include "../Graph_module/Stacks.h"
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "Search.h"
+#include "../Graph_module/Search.h"
 
 bool provider_network(List**,int*, int,int*,int);
 bool c_connected(List**,int*, int,int*,int,int);
