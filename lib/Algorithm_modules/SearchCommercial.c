@@ -1,6 +1,3 @@
-//
-// Created by joped on 09/10/2020.
-//
 #include "SearchCommercial.h"
 
 

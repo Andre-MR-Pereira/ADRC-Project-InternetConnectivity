@@ -6,7 +6,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "../Graph_module/Search.h"
+#include "Search.h"
 
 bool provider_network(List**,int*, int,int*,int);
 bool c_connected(List**,int*, int,int*,int,int);

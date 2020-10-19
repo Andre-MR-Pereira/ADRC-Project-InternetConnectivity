@@ -3,8 +3,7 @@
 
 #include "lib/Graph_module/ISPs.h"
 #include "lib/Graph_module/graph.h"
-#include "lib/Graph_module/Search.h"
-#include "lib/Algorithm_modules/SearchCommercial.h"
+#include "lib/Algorithm_modules/Search.h"
 #include "lib/Algorithm_modules/Commercialconnected.h"
 #include "lib/Algorithm_modules/biconnected.h"
 
