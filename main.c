@@ -4,7 +4,6 @@
 #include "lib/Graph_module/ISPs.h"
 #include "menus.h"
 
-
 int main(int argc,char const *argv[]) {
     FILE *fp_preview = NULL,*fp =NULL;
     List** ISP_graph=NULL;
