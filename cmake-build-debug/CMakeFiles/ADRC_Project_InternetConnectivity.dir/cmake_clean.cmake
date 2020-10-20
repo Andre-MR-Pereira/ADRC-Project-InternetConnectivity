@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Stacks.c.o"
   "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/graph.c.o"
   "CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o"
+  "CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o"
 )
 
 # Per-language clean rules from dependency scanning.

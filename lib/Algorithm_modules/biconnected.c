@@ -47,9 +47,9 @@ void link_biconnected(List** ISP_graph,int max_node_value){
 
     result=articulation_bridge(ISP_graph,discovery_time,discovered,parent,ancient,start_node,bridge);
     if(result==-1){
-        printf("The graph is not link-biconnected,and one of the bridges is the edge between node %d and %d.\n",bridge[0],bridge[1]);
+        printf("\n Answer: The input internet is not link-biconnected,and one of the bridges is the edge between node %d and %d.\n",bridge[0],bridge[1]);
     }else{
-        printf("The graph is link-biconnected!\n");
+        printf("\n Answer: The input internet is link-biconnected!\n");
     }
     free(bridge);
     free(discovery_time);

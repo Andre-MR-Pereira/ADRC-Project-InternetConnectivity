@@ -2,10 +2,7 @@
 #include <stdlib.h>
 
 #include "lib/Graph_module/ISPs.h"
-#include "lib/Graph_module/graph.h"
-#include "lib/Algorithm_modules/Search.h"
-#include "lib/Algorithm_modules/Connected.h"
-#include "lib/Algorithm_modules/biconnected.h"
+#include "menus.h"
 
 
 int main(int argc,char const *argv[]) {
@@ -21,9 +18,8 @@ int main(int argc,char const *argv[]) {
     close_ISP(fp_preview);  //fecha o ficheiro apos ser analisado
     close_ISP(fp);  //fecha o ficheiro apos ser analisado
 
-    printf("%d, %d\n",c_connected(ISP_graph,top_f,max_node_value,list_top,count_f,true_size), g_connected(ISP_graph, max_node_value, list_top, true_size));
-    link_biconnected(ISP_graph, max_node_value);
-    c_cycle(ISP_graph, max_node_value);
+    showInitMenu(ISP_graph,top_f,max_node_value,list_top,count_f,true_size);
+
     free(parent);
     free(top_f);
     free(list_top);

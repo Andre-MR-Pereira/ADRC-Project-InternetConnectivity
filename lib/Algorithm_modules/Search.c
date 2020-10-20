@@ -113,9 +113,9 @@ void print_cycle(bool* cycle, int flag, int size) {
 
     // Check if a cycle was found
     if(flag == -1)
-        printf("The input internet is commercially acyclic.\n");
+        printf("\n Answer: The input internet is commercially acyclic.\n");
     else {
-        printf("The input internet has a provider-customer cycle through nodes: ");
+        printf("\n Answer: The input internet has a provider-customer cycle through nodes: ");
         for (int i = 0; i < size; ++i) {
             if(cycle[i] == true)
                 printf("%d ", i+1);
