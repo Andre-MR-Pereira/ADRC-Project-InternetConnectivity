@@ -155,18 +155,18 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/SearchCom
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/SearchCommercial.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/SearchCommercial.c -o CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/SearchCommercial.c.s
 
-CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.o: CMakeFiles/ADRC_Project_InternetConnectivity.dir/flags.make
-CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.o: ../lib/Algorithm_modules/Commercialconnected.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.o   -c /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Commercialconnected.c
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.o: CMakeFiles/ADRC_Project_InternetConnectivity.dir/flags.make
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.o: ../lib/Algorithm_modules/Connected.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.o   -c /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Connected.c
 
-CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Commercialconnected.c > CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.i
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Connected.c > CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.i
 
-CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Commercialconnected.c -o CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.s
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Connected.c -o CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.s
 
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.o: CMakeFiles/ADRC_Project_InternetConnectivity.dir/flags.make
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.o: ../lib/Algorithm_modules/biconnected.c
@@ -189,7 +189,7 @@ ADRC_Project_InternetConnectivity_OBJECTS = \
 "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Search.c.o" \
 "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Stacks.c.o" \
 "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/SearchCommercial.c.o" \
-"CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.o" \
+"CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.o" \
 "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.o"
 
 # External object files for target ADRC_Project_InternetConnectivity
@@ -201,7 +201,7 @@ ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Search.c.o
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Stacks.c.o
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/SearchCommercial.c.o
-ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.o
+ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.o
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.o
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/link.txt

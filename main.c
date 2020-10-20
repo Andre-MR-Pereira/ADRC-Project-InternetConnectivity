@@ -4,7 +4,7 @@
 #include "lib/Graph_module/ISPs.h"
 #include "lib/Graph_module/graph.h"
 #include "lib/Algorithm_modules/Search.h"
-#include "lib/Algorithm_modules/Commercialconnected.h"
+#include "lib/Algorithm_modules/Connected.h"
 #include "lib/Algorithm_modules/biconnected.h"
 
 
@@ -23,6 +23,7 @@ int main(int argc,char const *argv[]) {
 
     printf("%d, %d\n",c_connected(ISP_graph,top_f,max_node_value,list_top,count_f,true_size), g_connected(ISP_graph, max_node_value, list_top, true_size));
     link_biconnected(ISP_graph, max_node_value);
+    c_cycle(ISP_graph, max_node_value);
     free(parent);
     free(top_f);
     free(list_top);

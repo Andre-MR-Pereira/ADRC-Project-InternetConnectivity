@@ -1,6 +1,5 @@
-
-#ifndef ADRC_PROJECT_INTERNETCONNECTIVITY_COMMERCIALCONNECTED_H
-#define ADRC_PROJECT_INTERNETCONNECTIVITY_COMMERCIALCONNECTED_H
+#ifndef ADRC_PROJECT_INTERNETCONNECTIVITY_CONNECTED_H
+#define ADRC_PROJECT_INTERNETCONNECTIVITY_CONNECTED_H
 #include "../Graph_module/graph.h"
 #include "../Graph_module/Stacks.h"
 #include <stdbool.h>
@@ -11,4 +10,4 @@
 bool provider_network(List**,int*, int,int*,int);
 bool c_connected(List**,int*, int,int*,int,int);
 bool g_connected(List**, int, int*, int);
-#endif //ADRC_PROJECT_INTERNETCONNECTIVITY_COMMERCIALCONNECTED_H
+#endif //ADRC_PROJECT_INTERNETCONNECTIVITY_CONNECTED_H

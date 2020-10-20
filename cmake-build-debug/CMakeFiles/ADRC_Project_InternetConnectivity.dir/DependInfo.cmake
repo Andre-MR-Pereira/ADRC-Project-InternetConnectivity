@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Commercialconnected.c" "/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.o"
+  "/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Connected.c" "/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.o"
   "/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Search.c" "/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Search.c.o"
   "/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/SearchCommercial.c" "/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/SearchCommercial.c.o"
   "/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/biconnected.c" "/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.o"

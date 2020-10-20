@@ -143,32 +143,32 @@ ADRC_Project_InternetConnectivity/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/build
 .PHONY : ADRC_Project_InternetConnectivity/fast
 
-lib/Algorithm_modules/Commercialconnected.o: lib/Algorithm_modules/Commercialconnected.c.o
+lib/Algorithm_modules/Connected.o: lib/Algorithm_modules/Connected.c.o
 
-.PHONY : lib/Algorithm_modules/Commercialconnected.o
+.PHONY : lib/Algorithm_modules/Connected.o
 
 # target to build an object file
-lib/Algorithm_modules/Commercialconnected.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.o
-.PHONY : lib/Algorithm_modules/Commercialconnected.c.o
+lib/Algorithm_modules/Connected.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.o
+.PHONY : lib/Algorithm_modules/Connected.c.o
 
-lib/Algorithm_modules/Commercialconnected.i: lib/Algorithm_modules/Commercialconnected.c.i
+lib/Algorithm_modules/Connected.i: lib/Algorithm_modules/Connected.c.i
 
-.PHONY : lib/Algorithm_modules/Commercialconnected.i
+.PHONY : lib/Algorithm_modules/Connected.i
 
 # target to preprocess a source file
-lib/Algorithm_modules/Commercialconnected.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.i
-.PHONY : lib/Algorithm_modules/Commercialconnected.c.i
+lib/Algorithm_modules/Connected.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.i
+.PHONY : lib/Algorithm_modules/Connected.c.i
 
-lib/Algorithm_modules/Commercialconnected.s: lib/Algorithm_modules/Commercialconnected.c.s
+lib/Algorithm_modules/Connected.s: lib/Algorithm_modules/Connected.c.s
 
-.PHONY : lib/Algorithm_modules/Commercialconnected.s
+.PHONY : lib/Algorithm_modules/Connected.s
 
 # target to generate assembly for a file
-lib/Algorithm_modules/Commercialconnected.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Commercialconnected.c.s
-.PHONY : lib/Algorithm_modules/Commercialconnected.c.s
+lib/Algorithm_modules/Connected.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.s
+.PHONY : lib/Algorithm_modules/Connected.c.s
 
 lib/Algorithm_modules/Search.o: lib/Algorithm_modules/Search.c.o
 
@@ -368,9 +368,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ADRC_Project_InternetConnectivity"
-	@echo "... lib/Algorithm_modules/Commercialconnected.o"
-	@echo "... lib/Algorithm_modules/Commercialconnected.i"
-	@echo "... lib/Algorithm_modules/Commercialconnected.s"
+	@echo "... lib/Algorithm_modules/Connected.o"
+	@echo "... lib/Algorithm_modules/Connected.i"
+	@echo "... lib/Algorithm_modules/Connected.s"
 	@echo "... lib/Algorithm_modules/Search.o"
 	@echo "... lib/Algorithm_modules/Search.i"
 	@echo "... lib/Algorithm_modules/Search.s"

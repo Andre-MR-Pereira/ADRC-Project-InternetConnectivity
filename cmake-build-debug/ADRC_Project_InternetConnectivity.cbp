@@ -76,10 +76,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Commercialconnected.c">
+		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Connected.c">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
-		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Commercialconnected.h">
+		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Connected.h">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
 		<Unit filename="/mnt/d/Faculdade/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Search.c">
