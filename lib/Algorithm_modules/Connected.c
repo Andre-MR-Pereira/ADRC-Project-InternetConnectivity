@@ -55,12 +55,19 @@ bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int
     return false;
 }
 
-bool g_connected(List** graph, int size, int* list_top, int true_size){
+bool g_connected(List** graph, int size, int true_size){
     int *parent = NULL;
     bool res = true;
-    int count = 1;
+    int count = 1, aux = 0;
 
-    parent = BFS(graph, size, list_top[0]);
+    for (int i = 0; i < size; ++i) {
+        if(graph[i] != NULL) {
+            aux = i+1;
+            break;
+        }
+    }
+
+    parent = BFS(graph, size, aux);
 
     for (int i = 0; i < size; ++i) {
         if(parent[i] != -1) {

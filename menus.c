@@ -10,7 +10,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
     if (option == 1 || option == 2 || option == 3 || option == 4 || option == 5 || option == 6) { //condição posta para ter a certeza que o utilizador só escolheu uma das opções apresentadas
         switch (option) {
             case 1: //se o utilizador introduzir o número 1, o programa vê se o grafo é conexo
-                if(g_connected(ISP_graph, max_node_value, list_top, true_size)==1){
+                if(g_connected(ISP_graph, max_node_value, true_size)==true){
                     printf("\nAnswer: The input internet is connected.\n");
                 }else{
                     printf("\nAnswer: The input internet isn´t connected.\n");
@@ -26,7 +26,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                 showInitMenu(ISP_graph,top_f,max_node_value,list_top,count_f,true_size);
                 break;
             case 4: //se o utilizador introduzir o número 4, o programa vê se o grafo é comercialmente conexo
-                if(c_connected(ISP_graph, top_f, max_node_value, list_top, count_f, true_size)==1){
+                if(c_connected(ISP_graph, top_f, max_node_value, list_top, count_f, true_size)==true){
                     printf("\nAnswer: The input internet is comercially connected.\n");
                 }else{
                     printf("\nAnswer: The input internet isn´t comercially connected.\n");

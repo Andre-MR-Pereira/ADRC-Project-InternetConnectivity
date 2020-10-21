@@ -9,5 +9,5 @@
 
 bool provider_network(List**,int*, int,int*,int);
 bool c_connected(List**,int*, int,int*,int,int);
-bool g_connected(List**, int, int*, int);
+bool g_connected(List**, int, int);
 #endif //ADRC_PROJECT_INTERNETCONNECTIVITY_CONNECTED_H
