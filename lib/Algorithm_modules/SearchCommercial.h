@@ -6,8 +6,9 @@
 #define ADRC_PROJECT_INTERNETCONNECTIVITY_SEARCHCOMMERCIAL_H
 #include "../Graph_module/graph.h"
 #include "../Graph_module/Stacks.h"
+#include <stdbool.h>
 
-int* BFS_C(List**,int,int);
+bool BFS_C(List**,int,int,int);
 int* DFS_C(List**,int,int);
 
 

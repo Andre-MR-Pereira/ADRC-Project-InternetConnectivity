@@ -4,17 +4,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int* BFS_C(List** graph, int size, int start_node){
+bool BFS_C(List** graph, int size, int start_node,int true_size){
     // Vetores auxiliares
     char *discovered = (char*)malloc(size*sizeof(char));
     int *parent = NULL;
     int edge, vertice,node,count=1;
     char edgec;
     // Inicializar os vetores
-    parent = (int*)malloc(size*sizeof(int));
     for (int i = 0; i < size; i++) {
         discovered[i] = '0';
-        parent[i] = -1;
     }
 
     Stack *auxS = NULL;
@@ -44,7 +42,7 @@ int* BFS_C(List** graph, int size, int start_node){
                 vertice = arestas->vertices - 1;
 
                 edgec = arestas->edges;
-                if(discovered[vertice]>=edgec||((start_node-1)==node && edgec=='2')){
+                if(discovered[vertice]>=edgec){
                     arestas = arestas->next;
                     continue;
 
@@ -55,10 +53,7 @@ int* BFS_C(List** graph, int size, int start_node){
                     count++;
 
                     FIFO[edge-1] = push_FIFO(FIFO[edge-1], create_element(arestas->vertices));
-                    if(edge!=2) {
-                        discovered[vertice] = edgec;
-                        parent[vertice] = get_node(auxS);
-                    }
+                    discovered[vertice] = edgec;
                 }
 
 
@@ -67,7 +62,17 @@ int* BFS_C(List** graph, int size, int start_node){
 
                 printf("\n");
             }
-            if(count == size) break; //duvidoso
+            if(count == true_size){
+                for (int u=0;u<3;u++){
+
+                    if(FIFO[u]!=NULL) if(FIFO[u][0]!=NULL)  FIFO[u]=erase_FIFO(FIFO[u]);
+
+
+                }
+                free(FIFO);
+                free(discovered);
+                return true; //duvidoso
+            }
 
             remove_FIFO(FIFO[i]);
         }
@@ -75,7 +80,7 @@ int* BFS_C(List** graph, int size, int start_node){
     }
     free(FIFO);
     free(discovered);
-    return parent;
+    return false;
 }
 
 int* DFS_C(List** graph, int size, int start_node){

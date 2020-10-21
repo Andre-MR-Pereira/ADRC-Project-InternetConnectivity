@@ -29,6 +29,7 @@ List** read_ISP(FILE *fp_preview,FILE *fp,int *max_node_value,int **top_f,int **
     }
 
     *list_top = (int*)malloc(sizeof(int)*(*max_node_value));
+    (*list_top)[0]=0;
     for(int i =0; i<*max_node_value;i++) {
         if (ISP_graph[i]==NULL) {
             (*top_f)[i]=0;

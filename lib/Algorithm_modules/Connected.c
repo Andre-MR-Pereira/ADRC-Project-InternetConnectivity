@@ -1,4 +1,5 @@
 #include "Connected.h"
+#include "SearchCommercial.h"
 
 bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_p){
     List* arestas = NULL;
@@ -16,6 +17,9 @@ bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_
 }
 
 bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int true_size){
+    if(list_top[0]==0){
+        return full_check(graph,size,true_size);
+    }
     if (!provider_network(graph,top_p,size,list_top,count_p)) return false;
     int start_node = list_top[0];
     bool *discovered = (bool*)malloc(size*sizeof(bool));
@@ -53,6 +57,13 @@ bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int
     erase_FIFO(FIFO);
     free(discovered);
     return false;
+}
+
+bool full_check(List** graph,int size,int true_size){
+    for(int i = 0; i<size;i++){
+        if(graph[0]!=NULL) if(!BFS_C(graph,size,i+1,true_size)) return false;
+    }
+    return true;
 }
 
 bool g_connected(List** graph, int size, int true_size){
