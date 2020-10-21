@@ -50,8 +50,8 @@ bool BFS_C(List** graph, int size, int start_node,int true_size){
                 edge = edgec - '0';
 
                 if (edge<i+1 || (edge==i+1 && i!=1)){
-                    count++;
 
+                    if (discovered[vertice]=='0')count++;
                     FIFO[edge-1] = push_FIFO(FIFO[edge-1], create_element(arestas->vertices));
                     discovered[vertice] = edgec;
                 }
@@ -60,7 +60,6 @@ bool BFS_C(List** graph, int size, int start_node,int true_size){
                 arestas = arestas->next;
 
 
-                printf("\n");
             }
             if(count == true_size){
                 for (int u=0;u<3;u++){
@@ -78,6 +77,7 @@ bool BFS_C(List** graph, int size, int start_node,int true_size){
         }
         FIFO[i]=erase_FIFO(FIFO[i]);
     }
+    printf("%i,%i",count,true_size);
     free(FIFO);
     free(discovered);
     return false;

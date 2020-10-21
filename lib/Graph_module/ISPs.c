@@ -46,7 +46,7 @@ List** read_ISP(FILE *fp_preview,FILE *fp,int *max_node_value,int **top_f,int **
 
 FILE* open_ISP(FILE* file_pointer){
 
-    file_pointer=fopen("../lib/Assets/ex.txt","r");
+    file_pointer=fopen("../lib/Assets/LargeNetwork.txt","r");
     if (file_pointer == NULL) {
         return (FILE *) EXIT_FAILURE;
     }

@@ -61,7 +61,7 @@ bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int
 
 bool full_check(List** graph,int size,int true_size){
     for(int i = 0; i<size;i++){
-        if(graph[0]!=NULL) if(!BFS_C(graph,size,i+1,true_size)) return false;
+        if(graph[i]!=NULL) if(!BFS_C(graph,size,i+1,true_size)) return false;
     }
     return true;
 }
