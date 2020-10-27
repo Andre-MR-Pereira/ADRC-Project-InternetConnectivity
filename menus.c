@@ -24,7 +24,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     c_cycle(ISP_graph, max_node_value); //corre para ver se e comercially cyclic
                     break;
                 case 4: //se o utilizador introduzir o número 4, o programa vê se o grafo é comercialmente conexo
-                    if(c_connected(ISP_graph, top_f, max_node_value, list_top, count_f, true_size)==true){  //corre para ver se e comercially connected
+                    if(cycle_graph(ISP_graph, max_node_value, top_f, list_top, count_f, true_size)==true){  //corre para ver se e comercially connected
                         printf("\nAnswer: The input internet is comercially connected.\n");
                     }else{
                         printf("\nAnswer: The input internet isn´t comercially connected.\n");

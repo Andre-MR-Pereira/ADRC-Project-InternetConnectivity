@@ -7,6 +7,7 @@
 #include "lib/Algorithm_modules/Search.h"
 #include "lib/Algorithm_modules/Connected.h"
 #include "lib/Algorithm_modules/biconnected.h"
+#include "lib/Algorithm_modules/FindCycles.h"
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,26 +1,41 @@
 #include "Connected.h"
 #include "SearchCommercial.h"
 
-bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_p){
+bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_p,int* cycle){
     List* arestas = NULL;
-    int count_aux;
+    int aux,node;
+    int count_aux;int* c=(int*)malloc(sizeof(int)*size);
+    for (int i = 0; i < size; ++i) {
+        c[i]=-1;
+    }
     for(int i = 0; i<count_p;i++){
         count_aux = 0;
-        arestas = graph[list_top[i]-1];
+        node=list_top[i]-1;
+        arestas = graph[node];
         while (arestas!=NULL){
-            if(top_p[arestas->vertices-1]) count_aux++;
+            aux=check_root(cycle,arestas->vertices-1);
+            if(c[aux]!=node&&node!=aux){
+                if(top_p[aux]){
+                    count_aux++;
+                    c[aux]=node;
+                }
+            }
             arestas=arestas->next;
         }
-        if(count_aux!=count_p-1) return false;
+        if(count_aux!=count_p-1) {
+
+            return false;
+        }
     }
     return true;
 }
 
-bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int true_size){
+bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int true_size,int* cycle){
+    int aux;
     if(list_top[0]==0){
         return full_check(graph,size,true_size);
     }
-    if (!provider_network(graph,top_p,size,list_top,count_p)) return false;
+    if (!provider_network(graph,top_p,size,list_top,count_p,cycle)) return false;
     int start_node = list_top[0];
     bool *discovered = (bool*)malloc(size*sizeof(bool));
 
@@ -38,10 +53,11 @@ bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int
         auxS = FIFO[0];
         arestas = graph[get_node(auxS)-1];
         while (arestas != NULL) {
-            if(discovered[arestas->vertices-1] == false && ((arestas->edges=='1')||(top_p[arestas->vertices-1] && arestas->edges=='2'))){
+            aux=check_root(cycle,arestas->vertices-1);
+            if(discovered[aux] == false && ((arestas->edges=='1')||(top_p[aux] && arestas->edges=='2'))){
                     count++;
-                    discovered[arestas->vertices - 1] = true;
-                    FIFO = push_FIFO(FIFO, create_element(arestas->vertices));
+                    discovered[aux] = true;
+                    FIFO = push_FIFO(FIFO, create_element(aux+1));
             }
             arestas = arestas->next;
         }
