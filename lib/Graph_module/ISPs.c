@@ -3,25 +3,30 @@
 #include <stdlib.h>
 
 
-
+//funcao para ler o ficheiro e criar o grafo para ser analisado
 List** read_ISP(FILE *fp_preview,FILE *fp,int *max_node_value,int **top_f,int **list_top,int*count_f,int* true_size){
+    //inicializacao de variaveis
     int tail,head,u=0;
     char mode;
     List** ISP_graph;
 
+    //procura do maior no da rede
     while(fscanf(fp_preview,"%d %d %c",&tail,&head,&mode)!=EOF){
         if(tail>*max_node_value){
-            *max_node_value=tail;
+            *max_node_value=tail;   //guarda o maior valor do no encontrado
         }
     }
-    *true_size=*max_node_value;
+
+    *true_size=*max_node_value; //guarda o maior valor do no encontrado
     *top_f = (int*)malloc((*max_node_value)*sizeof(int));
+    //inicializa todos os valores a 1
     for(int i =0; i<*max_node_value;i++) (*top_f)[i]=1;
-    ISP_graph=create_graph(*max_node_value);
+
+    ISP_graph=create_graph(*max_node_value);//cria o grafo para ser preenchido
     *count_f = *max_node_value;
 
-    while(fscanf(fp,"%d %d %c",&tail,&head,&mode)!=EOF){
-        ISP_graph=fill_ISP(ISP_graph,tail,head,mode);
+    while(fscanf(fp,"%d %d %c",&tail,&head,&mode)!=EOF){    //le agora o ficheiro mais uma vez, mas com a intencao de preencher o grafo
+        ISP_graph=fill_ISP(ISP_graph,tail,head,mode);   //adiciona um novo no ao grafo
         if(mode=='3'&&(*top_f)[tail-1]==1){
             (*top_f)[tail-1]=0;
             (*count_f)--;
@@ -44,7 +49,7 @@ List** read_ISP(FILE *fp_preview,FILE *fp,int *max_node_value,int **top_f,int **
     return ISP_graph;
 }
 
-FILE* open_ISP(FILE* file_pointer){
+FILE* open_ISP(FILE* file_pointer){ //abre o ficheiro da rede
 
     file_pointer=fopen("../lib/Assets/LargeNetwork.txt","r");
     if (file_pointer == NULL) {
@@ -59,6 +64,6 @@ FILE* open_ISP(FILE* file_pointer){
     return file_pointer;
 }
 
-void close_ISP(FILE *file_pointer){
+void close_ISP(FILE *file_pointer){ //fecha o ficheiro
     fclose(file_pointer);
 }
