@@ -2,9 +2,9 @@
 
 //Apresentação do menu inicial
 void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top,int count_f,int true_size) {
-    int option = 0,using=1;
+    int option = 0;
 
-    while(using=1){
+    while(true){
         printf("\n=================[Menu]=================\n---Please select one of the following---\n\n\n1.  Determine if input internet is connected.\n2.  Determine if input internet is linkbiconnected.\n3.  Determine if input internet is commercially acyclic.\n4.  Determine if input internet is comercially connected.\n5.  Extra\n\n\n\n\n\n6.Exit\n\n");
         scanf("%d", &option); //lê qual opção o utilizador escolheu
 
