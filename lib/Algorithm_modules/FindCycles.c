@@ -4,7 +4,7 @@
 
 #include "FindCycles.h"
 
-int DFS_Cycles(List** graph, int node, int* discovered, bool* finished, int* cycle,int* sizec,int* cycle_ids,int* count_d,bool* has_cycle){
+int DFS_Cycles(List** graph, int node, int* discovered, bool* finished, int* cycle,int* sizec,int* cycle_ids,int* count_d,bool* has_cycle,Stack** Stack){
     // Recursive DFS to find cycles -- Needs a start function
     bool aux = false;
     int au =0;
@@ -21,10 +21,10 @@ int DFS_Cycles(List** graph, int node, int* discovered, bool* finished, int* cyc
         }
 
         if (discovered[a->vertices - 1] == false) {
-            au=DFS_Cycles(graph, a->vertices, discovered, finished, cycle,sizec,cycle_ids,count_d,has_cycle);
+            au=DFS_Cycles(graph, a->vertices, discovered, finished, cycle,sizec,cycle_ids,count_d,has_cycle,Stack);
             if(discovered[au]<discovered[cycle_ids[node-1]]) cycle_ids[node-1]=au;
         } else if (finished[cycle_ids[a->vertices - 1]] == false) {
-            connect_cycle(sizec,cycle,a->vertices - 1,node - 1);
+            *Stack=push_LIFO(*Stack,create_element(node - 1));
             has_cycle[node-1]=true;
             has_cycle[a->vertices - 1]=true;
             if (discovered[a->vertices - 1]<discovered[cycle_ids[node-1]]) cycle_ids[node-1] = a->vertices - 1;
@@ -35,11 +35,18 @@ int DFS_Cycles(List** graph, int node, int* discovered, bool* finished, int* cyc
     }
 
     finished[node - 1] = true; // Node is finished
-
-    if (cycle_ids[node-1]!=node-1&&aux==false) {
-        connect_cycle(sizec,cycle,node - 1,cycle_ids[node-1]);
-        has_cycle[node-1]=true;
-        has_cycle[cycle_ids[node-1]]=true;
+    if(aux==false){
+        if (cycle_ids[node-1]!=node-1) {
+            *Stack=push_LIFO(*Stack,create_element(node - 1));
+            has_cycle[node-1]=true;
+        }
+        else if(has_cycle[node-1]){
+            au=cycle[node-1];
+            while(*Stack!=NULL){
+                cycle[get_node(*Stack)]=au;
+                remove_LIFO(Stack);
+            }
+        }
     }
 
     return cycle_ids[node-1];
@@ -56,6 +63,7 @@ int* check_cycle(List** graph, int size,bool* has_cycle) {
     if ((discovered == NULL) || (finished == NULL) || (cycle == NULL))
         EXIT_FAILURE;
     int count_d=0;
+    Stack* Stack=NULL;
     // Initializing at default values
     for (int i = 0; i < size; i++) {
         discovered[i] = 0;
@@ -70,7 +78,7 @@ int* check_cycle(List** graph, int size,bool* has_cycle) {
     // Global DFS - because it isn't known if the graph is connected
     for (int i = 0; i < size; ++i) {
         if((graph[i] != NULL) && (discovered[i] == false)) {
-            DFS_Cycles(graph, i+1, discovered, finished, cycle,sizec,cycle_ids,&count_d,has_cycle);
+            DFS_Cycles(graph, i+1, discovered, finished, cycle,sizec,cycle_ids,&count_d,has_cycle,&Stack);
         }
     }
 
@@ -104,9 +112,7 @@ int check_fix_root(int* id,int p){
     return i;
 }
 int check_root(int* id,int p){
-    int i;
-    for (i = p; i != id[i]; i = id[i]);
-    return i;
+    return id[p];
 }
 
 
@@ -115,7 +121,7 @@ List* insertList(List* edges,int *p_forn,int curr,int* cycle,List* insert){
     List *aux=insert;
     List * new_node=NULL;
     while(edges!=NULL){
-        if(check_fix_root(cycle,edges->vertices-1)!=curr){
+        if(check_root(cycle,edges->vertices-1)!=curr){
             new_node=(List*)malloc(sizeof(struct Node));
             new_node->vertices=edges->vertices;
             new_node->edges=edges->edges;
@@ -147,7 +153,7 @@ bool cycle_graph(List** graph, int size,int* top_f,int*list_top,int count_f,int 
     for (int i=0;i<size;i++) {
         p_forn =1;
         if (has_cycle[i]) {
-            aux = check_fix_root(cycle, i);
+            aux = check_root(cycle, i);
             c_graph[aux] = insertList(graph[i], &p_forn,aux,cycle,c_graph[aux]);
             if(aux!=i) true_size--;
             if (p_forn && check[aux] == 0) {
@@ -157,7 +163,7 @@ bool cycle_graph(List** graph, int size,int* top_f,int*list_top,int count_f,int 
 
         } else c_graph[i] = graph[i];
     }
-    //print_graph(c_graph,size);
+
     while(LIFO!=NULL){
         aux=remove_LIFO(&LIFO);
         if(check[aux]==1){
