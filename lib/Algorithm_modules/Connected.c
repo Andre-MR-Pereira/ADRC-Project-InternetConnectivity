@@ -23,11 +23,13 @@ bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_
             arestas=arestas->next;
         }
         if(count_aux!=count_p-1) {
-
+            free(count_aux);
             return false;
         }
     }
+    free(count_aux);
     return true;
+
 }
 
 bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int true_size,int* cycle){
