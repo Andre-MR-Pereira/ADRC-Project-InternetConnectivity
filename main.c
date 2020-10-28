@@ -10,8 +10,9 @@ int main(int argc,char const *argv[]) {
     int max_node_value=1,count_f=0,true_size=1; //initializacao de variaveis de tratamento de grafo
     int *parent = NULL,*top_f=NULL,*list_top=NULL;
     //abertura do ficheiro em analise
-    fp_preview=open_ISP(fp_preview);
-    fp=open_ISP(fp);
+  
+    fp_preview=open_ISP(fp_preview,argc,argv);
+    fp=open_ISP(fp,argc,argv);
 
     //leitura e preenchimento do grafo da rede em analise
     ISP_graph=read_ISP(fp_preview,fp,&max_node_value,&top_f,&list_top,&count_f,&true_size);
