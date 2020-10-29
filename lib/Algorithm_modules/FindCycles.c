@@ -10,7 +10,7 @@ int DFS_Cycles(List** graph, int node, int* discovered, bool* finished, int* cyc
     int au =0;
     (*count_d)++;
     discovered[node - 1] = (*count_d); // coloca quando foi descoberto
-
+    *Stack=push_LIFO(*Stack,create_element(node - 1));
     List *a = graph[node - 1]; //
 
     while ((a != NULL)) {
@@ -24,7 +24,6 @@ int DFS_Cycles(List** graph, int node, int* discovered, bool* finished, int* cyc
             au=DFS_Cycles(graph, a->vertices, discovered, finished, cycle,cycle_ids,count_d,has_cycle,Stack);
             if(discovered[au]<discovered[cycle_ids[node-1]]) cycle_ids[node-1]=au; //se tiver visto um mais antigo e o novo ciclo deste no
         } else if (finished[cycle_ids[a->vertices - 1]] == false) {// se vir um no descoberto mas q nao acabou
-            *Stack=push_LIFO(*Stack,create_element(node - 1));//coloca na stack
             has_cycle[node-1]=true;//o no atual e o fim o que viu fazem parte do ciclo
             has_cycle[a->vertices - 1]=true;
             if (discovered[a->vertices - 1]<discovered[cycle_ids[node-1]]) cycle_ids[node-1] = a->vertices - 1; //se tiver visto um mais antigo e o novo ciclo deste no
@@ -37,14 +36,13 @@ int DFS_Cycles(List** graph, int node, int* discovered, bool* finished, int* cyc
     finished[node - 1] = true; // Node is finished
     if(aux==false){
         if (cycle_ids[node-1]!=node-1) {
-            *Stack=push_LIFO(*Stack,create_element(node - 1));//se o no tiver vindo dum descoberto a mais tempo esta numa zona fortemente conexa
             has_cycle[node-1]=true;
         }
-        else if(has_cycle[node-1]){//se o mais antigo for ele mesmo mas fizer parte de um ciclo e o fim da zona
-            au=cycle[node-1];
-            while(*Stack!=NULL){//coloca toda a zona com a mesma raiz
-                cycle[get_node(*Stack)]=au;
-                remove_LIFO(Stack);
+        else{//se o mais antigo for ele mesmo mas fizer parte de um ciclo e o fim da zona
+            au=remove_LIFO(Stack);
+            while(au!=cycle[node-1]){//coloca toda a zona com a mesma raiz
+                cycle[au]=node-1;
+                au=remove_LIFO(Stack);
             }
         }
     }
@@ -140,7 +138,7 @@ bool cycle_graph(List** graph, int size,int* top_f,int*list_top,int count_f,int 
 
         } else c_graph[i] = graph[i];//se nao for loop apenas aponta pro mesmo sitio
     }
-
+    print_graph(c_graph,size);
     while(LIFO!=NULL){
         aux=remove_LIFO(&LIFO);
         if(check[aux]==1){//se o super no for fornecedor
