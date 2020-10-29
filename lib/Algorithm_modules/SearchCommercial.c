@@ -4,6 +4,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/* Este ficheiro contém uma BFS e uma DFS comerciais, que normalmente não são utilizadas
+ * excepto se, de alguma maneira o programa considerar que não há ISPs tier 1
+ * */
+
 bool BFS_C(List** graph, int size, int start_node,int true_size){
     // Vetores auxiliares
     char *discovered = (char*)malloc(size*sizeof(char));
