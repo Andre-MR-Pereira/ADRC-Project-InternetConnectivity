@@ -6,53 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Connected.h
-../Graph_module/graph.h
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
-../Graph_module/Stacks.h
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
-../Algorithm_modules/FindCycles.h
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/FindCycles.h
-stdbool.h
--
+/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.c
+ISPs.h
+/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
 stdlib.h
 -
+
+/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/ISPs.h
+graph.h
+/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
 stdio.h
 -
-Search.h
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Search.h
 
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/FindCycles.c
-FindCycles.h
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/FindCycles.h
-
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/FindCycles.h
-../Graph_module/graph.h
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
-../Graph_module/Stacks.h
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
-../Algorithm_modules/Connected.h
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Connected.h
-stdlib.h
--
-stdio.h
--
-stdbool.h
--
-
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/Search.h
-../Graph_module/graph.h
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
-../Graph_module/Stacks.h
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
-stdlib.h
--
-stdio.h
--
-stdbool.h
--
-
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
-
-/mnt/c/Users/joped/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+/mnt/c/Users/ASUS/Documents/faculdade/4 ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
 

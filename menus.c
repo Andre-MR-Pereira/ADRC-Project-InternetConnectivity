@@ -18,7 +18,11 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     }
                     break;
                 case 2: //se o utilizador introduzir o número 2, o programa vê se o grafo têm, pelo menos, uma ponte
-                    link_biconnected(ISP_graph, max_node_value);    //corre para ver se e link biconnected
+                    if(g_connected(ISP_graph, max_node_value, true_size)==true){
+                        link_biconnected(ISP_graph, max_node_value);    //corre para ver se e link biconnected
+                    }else{
+                        printf("\nAnswer: The input internet isn´t connected, therefore it is not link_biconnected.\n");
+                    }
                     break;
                 case 3: //se o utilizador introduzir o número 3, o programa vê se o grafo é comercialmente acíclico
                     c_cycle(ISP_graph, max_node_value); //corre para ver se e comercially cyclic
