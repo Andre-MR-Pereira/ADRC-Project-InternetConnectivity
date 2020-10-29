@@ -1,20 +1,20 @@
 #include "Connected.h"
 #include "SearchCommercial.h"
 
-bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_p,int* cycle){
+bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_p,int* cycle){//verifca se os tier 1 estao conectados
     List* arestas = NULL;
     int aux,node;
     int count_aux;int* c=(int*)malloc(sizeof(int)*size);
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < size; ++i) {//verifica se o no atual ja viu o no i
         c[i]=-1;
     }
-    for(int i = 0; i<count_p;i++){
+    for(int i = 0; i<count_p;i++){//passa por todos os tier 1
         count_aux = 0;
         node=list_top[i]-1;
         arestas = graph[node];
         while (arestas!=NULL){
             aux=check_root(cycle,arestas->vertices-1);
-            if(c[aux]!=node&&node!=aux){
+            if(c[aux]!=node&&node!=aux){//verifica se ve todos os tier 1
                 if(top_p[aux]){
                     count_aux++;
                     c[aux]=node;
@@ -22,7 +22,7 @@ bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_
             }
             arestas=arestas->next;
         }
-        if(count_aux!=count_p-1) {
+        if(count_aux!=count_p-1) {//se nao tiver visto a rede nao e conexa
             free(c);
             return false;
         }
@@ -32,20 +32,20 @@ bool provider_network(List** graph,int* top_p, int size,int* list_top,int count_
 
 }
 
-bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int true_size,int* cycle){
+bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int true_size,int* cycle){//verifica se a rede e conexa
     int aux;
-    if(list_top[0]==0){
+    if(list_top[0]==0){//so para ter a certeza
         return full_check(graph,size,true_size);
     }
     if (!provider_network(graph,top_p,size,list_top,count_p,cycle)) return false;
-    int start_node = list_top[0];
-    bool *discovered = (bool*)malloc(size*sizeof(bool));
+    int start_node = list_top[0];//ha sempre um tier 1
+    bool *discovered = (bool*)malloc(size*sizeof(bool));//ja foi descoberto
 
     // Inicializar os vetores
     for (int i = 0; i < size; i++) {
         discovered[i] = false;
     }
-
+    //passa bfs
     Stack **FIFO = create_FIFO(create_element(start_node));
     Stack *auxS = NULL;
     List *arestas = NULL;
@@ -55,15 +55,16 @@ bool c_connected(List** graph,int* top_p, int size,int* list_top,int count_p,int
         auxS = FIFO[0];
         arestas = graph[get_node(auxS)-1];
         while (arestas != NULL) {
-            aux=check_root(cycle,arestas->vertices-1);
+            aux=check_root(cycle,arestas->vertices-1);//ve a raiz
             if(discovered[aux] == false && ((arestas->edges=='1')||(top_p[aux] && arestas->edges=='2'))){
+                //verifica se ve a aresta e 1 ou 2 se for para um fornecedor
                     count++;
                     discovered[aux] = true;
                     FIFO = push_FIFO(FIFO, create_element(aux+1));
             }
             arestas = arestas->next;
         }
-        if(count == true_size){
+        if(count == true_size){//se vir todos
             erase_FIFO(FIFO);
             free(discovered);
             return true;

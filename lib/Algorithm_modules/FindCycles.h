@@ -11,9 +11,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-int DFS_Cycles(List**,int,int*,bool*, int*,int*,int*,int*,bool*,Stack**);
+int DFS_Cycles(List**,int,int*,bool*, int*,int*,int*,bool*,Stack**);
 int* check_cycle(List**,int,bool*);
-int connect_cycle(int*,int*,int,int);
 int check_root(int*,int);
 List* insertList(List*,int *,int,int*,List*);
 bool cycle_graph(List**,int,int*,int*,int,int);

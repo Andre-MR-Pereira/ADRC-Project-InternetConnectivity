@@ -4,145 +4,122 @@
 
 #include "FindCycles.h"
 
-int DFS_Cycles(List** graph, int node, int* discovered, bool* finished, int* cycle,int* sizec,int* cycle_ids,int* count_d,bool* has_cycle,Stack** Stack){
+int DFS_Cycles(List** graph, int node, int* discovered, bool* finished, int* cycle,int* cycle_ids,int* count_d,bool* has_cycle,Stack** Stack){
     // Recursive DFS to find cycles -- Needs a start function
     bool aux = false;
     int au =0;
     (*count_d)++;
-    discovered[node - 1] = (*count_d); // Node was discovered
+    discovered[node - 1] = (*count_d); // coloca quando foi descoberto
 
-    List *a = graph[node - 1]; // pointer to navigate the edges
+    List *a = graph[node - 1]; //
 
     while ((a != NULL)) {
 
-        if (a->edges != '1') { // check the type of connection
+        if (a->edges != '1') { // check the type of connection vai passar so por arestas 1
             a = a->next; // navigate to next edge
             continue;
         }
 
         if (discovered[a->vertices - 1] == false) {
-            au=DFS_Cycles(graph, a->vertices, discovered, finished, cycle,sizec,cycle_ids,count_d,has_cycle,Stack);
-            if(discovered[au]<discovered[cycle_ids[node-1]]) cycle_ids[node-1]=au;
-        } else if (finished[cycle_ids[a->vertices - 1]] == false) {
-            *Stack=push_LIFO(*Stack,create_element(node - 1));
-            has_cycle[node-1]=true;
+            au=DFS_Cycles(graph, a->vertices, discovered, finished, cycle,cycle_ids,count_d,has_cycle,Stack);
+            if(discovered[au]<discovered[cycle_ids[node-1]]) cycle_ids[node-1]=au; //se tiver visto um mais antigo e o novo ciclo deste no
+        } else if (finished[cycle_ids[a->vertices - 1]] == false) {// se vir um no descoberto mas q nao acabou
+            *Stack=push_LIFO(*Stack,create_element(node - 1));//coloca na stack
+            has_cycle[node-1]=true;//o no atual e o fim o que viu fazem parte do ciclo
             has_cycle[a->vertices - 1]=true;
-            if (discovered[a->vertices - 1]<discovered[cycle_ids[node-1]]) cycle_ids[node-1] = a->vertices - 1;
+            if (discovered[a->vertices - 1]<discovered[cycle_ids[node-1]]) cycle_ids[node-1] = a->vertices - 1; //se tiver visto um mais antigo e o novo ciclo deste no
             aux = true;
         }
 
-        a = a->next; // navigate to next edge
+        a = a->next;
     }
 
     finished[node - 1] = true; // Node is finished
     if(aux==false){
         if (cycle_ids[node-1]!=node-1) {
-            *Stack=push_LIFO(*Stack,create_element(node - 1));
+            *Stack=push_LIFO(*Stack,create_element(node - 1));//se o no tiver vindo dum descoberto a mais tempo esta numa zona fortemente conexa
             has_cycle[node-1]=true;
         }
-        else if(has_cycle[node-1]){
+        else if(has_cycle[node-1]){//se o mais antigo for ele mesmo mas fizer parte de um ciclo e o fim da zona
             au=cycle[node-1];
-            while(*Stack!=NULL){
+            while(*Stack!=NULL){//coloca toda a zona com a mesma raiz
                 cycle[get_node(*Stack)]=au;
                 remove_LIFO(Stack);
             }
         }
     }
 
-    return cycle_ids[node-1];
+    return cycle_ids[node-1];//retorna o no mais antigo que viu
 }
 
 int* check_cycle(List** graph, int size,bool* has_cycle) {
 
     // Creating auxiliar variables
-    int* discovered = (int*)malloc(size*sizeof(int));
-    bool* finished = (bool*)malloc(size*sizeof(bool));
-    int* cycle = (int*)malloc(size*sizeof(int));
-    int* sizec = (int*)malloc(size*sizeof(int));
-    int* cycle_ids = (int*)malloc(size*sizeof(int));
+    int* discovered = (int*)malloc(size*sizeof(int));//quando foi descoberto
+    bool* finished = (bool*)malloc(size*sizeof(bool));//ja acabou
+    int* cycle = (int*)malloc(size*sizeof(int));//valores finais de ciclo
+    int* cycle_ids = (int*)malloc(size*sizeof(int));//valores medios de ciclo
     if ((discovered == NULL) || (finished == NULL) || (cycle == NULL))
         EXIT_FAILURE;
-    int count_d=0;
+    int count_d=0;//conta quando e foi descoberto
     Stack* Stack=NULL;
-    // Initializing at default values
+    // inicializa variaveis
     for (int i = 0; i < size; i++) {
         discovered[i] = 0;
         finished[i] = false;
         cycle[i] = i;
-        sizec[i]=1;
         cycle_ids[i] = i;
     }
 
 
 
-    // Global DFS - because it isn't known if the graph is connected
+    // Global DFS
     for (int i = 0; i < size; ++i) {
         if((graph[i] != NULL) && (discovered[i] == false)) {
-            DFS_Cycles(graph, i+1, discovered, finished, cycle,sizec,cycle_ids,&count_d,has_cycle,&Stack);
+            DFS_Cycles(graph, i+1, discovered, finished, cycle,cycle_ids,&count_d,has_cycle,&Stack);
         }
     }
 
-    // Free allocated memory
     free(discovered);
     free(finished);
-    free(sizec);
     free(cycle_ids);
     return cycle;
 
 }
-int connect_cycle(int* sz, int* id ,int p, int q){
-    int i ,j,t,x;
-    for (i = p; i != id[i]; i = id[i]);
-    for (j = q; j != id[j]; j = id[j]);
-    if (i == j) t = i;
-    else if (sz[i] < sz[j]) {
-        id[i] = j; sz[j] += sz[i]; t = j;
-    } else {
-        id[j] = i; sz[i] += sz[j]; t = i;
-    }
-    for (i = p; i != id[i]; i = x) {x = id[i]; id[i] = t;}
-    for (j = q; j != id[j]; j = x) {x = id[j]; id[j] = t;}
-    return 0;
-}
-int check_fix_root(int* id,int p){
-    int i,x,t;
-    for (i = p; i != id[i]; i = id[i]);
-    t=i;
-    for (i = p; i != id[i]; i = x) {x = id[i]; id[i] = t;}
-    return i;
-}
+
 int check_root(int* id,int p){
-    return id[p];
+    return id[p];//verifica a raiz da zona fortemente conexa
 }
 
 
 
-List* insertList(List* edges,int *p_forn,int curr,int* cycle,List* insert){
+List* insertList(List* edges,int *p_forn,int curr,int* cycle,List* insert){//copia as arestas para outra posição
     List *aux=insert;
     List * new_node=NULL;
     while(edges!=NULL){
-        if(check_root(cycle,edges->vertices-1)!=curr){
+        if(check_root(cycle,edges->vertices-1)!=curr){//se a aresta nao for para dentro do proprio ciclo vai copiar
             new_node=(List*)malloc(sizeof(struct Node));
             new_node->vertices=edges->vertices;
             new_node->edges=edges->edges;
             aux=insertHeadList(aux,new_node);
+            if(edges->edges=='3')(*p_forn=0);//Nao e fornecedor
+
         }
         edges=edges->next;
     }
-
     return aux;
 }
 
-bool cycle_graph(List** graph, int size,int* top_f,int*list_top,int count_f,int true_size){
-    List** c_graph=create_graph(size);
+bool cycle_graph(List** graph, int size,int* top_f,int*list_top,int count_f,int true_size){//cria super nos e verfica conectividade
+    List** c_graph=create_graph(size);//grafo copia
     Stack* LIFO=NULL;
     List* aux2,*next;
-    bool connected;
+    bool connected;// e connexa
     bool* has_cycle=(bool*)malloc(sizeof(bool)*size);
     int aux;
     int p_forn =0;
 
-    int* check = (int*)malloc(sizeof(int)*size);
+    int* check = (int*)malloc(sizeof(int)*size);//verifica se já foi considerado não fornecedor
     for (int i=0;i<size;i++){
         check[i]=0;
         has_cycle[i]=false;
@@ -151,32 +128,32 @@ bool cycle_graph(List** graph, int size,int* top_f,int*list_top,int count_f,int 
 
 
     for (int i=0;i<size;i++) {
-        p_forn =1;
+        p_forn =1;  //pode ser forncedor
         if (has_cycle[i]) {
-            aux = check_root(cycle, i);
-            c_graph[aux] = insertList(graph[i], &p_forn,aux,cycle,c_graph[aux]);
-            if(aux!=i) true_size--;
-            if (p_forn && check[aux] == 0) {
-                check[aux] = 1;
+            aux = check_root(cycle, i);//vai buscar a raiz
+            c_graph[aux] = insertList(graph[i], &p_forn,aux,cycle,c_graph[aux]);//copia as arestas
+            if(aux!=i) true_size--;//o elemento faz parte dum super no o numero de nos diminui
+            if (p_forn && check[aux] == 0) {//a raiz pode ser forncedora
+                check[aux] = 1;//ja sabe qual e a raiz
                 LIFO = push_LIFO(LIFO, create_element(aux));
-            } else if (!p_forn) check[aux] = -1;
+            } else if (!p_forn) check[aux] = -1;//nao e forncedor
 
-        } else c_graph[i] = graph[i];
+        } else c_graph[i] = graph[i];//se nao for loop apenas aponta pro mesmo sitio
     }
 
     while(LIFO!=NULL){
         aux=remove_LIFO(&LIFO);
-        if(check[aux]==1){
+        if(check[aux]==1){//se o super no for fornecedor
             top_f[aux]=1;
             list_top[count_f]=aux+1;
             count_f++;
         }
     }
 
-    connected=c_connected(c_graph,top_f,size,list_top,count_f,true_size,cycle);
+    connected=c_connected(c_graph,top_f,size,list_top,count_f,true_size,cycle);//verifica conectividade
 
     for (int i = 0; i < size; ++i) {
-        if(c_graph[i]!=graph[i]) {
+        if(c_graph[i]!=graph[i]) {//se for uma copia
             for (aux2 = c_graph[i]; aux2 != NULL; aux2 = next) {
                 next = aux2->next;
                 free(aux2);
