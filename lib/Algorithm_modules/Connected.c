@@ -86,10 +86,13 @@ bool full_check(List** graph,int size,int true_size){
 }
 
 bool g_connected(List** graph, int size, int true_size){
+    // Função que verifica se o grafo é conexo
+
     int *parent = NULL;
-    bool res = true;
+    bool res = true; // true se for conexo
     int count = 1, aux = 0;
 
+    // Ciclo for para detetar um primeiro vértice para começar a BFS
     for (int i = 0; i < size; ++i) {
         if(graph[i] != NULL) {
             aux = i+1;
@@ -99,6 +102,7 @@ bool g_connected(List** graph, int size, int true_size){
 
     parent = BFS(graph, size, aux);
 
+    // Verificar se a BFS chegou a todos os vértices
     for (int i = 0; i < size; ++i) {
         if(parent[i] != -1) {
             count++;
@@ -106,7 +110,7 @@ bool g_connected(List** graph, int size, int true_size){
     }
 
     if(count != true_size)
-        res = false;
+        res = false; // Se algum vértice não tiver sido alcançado, o grafo não é conexo
 
     free(parent);
 
