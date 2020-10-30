@@ -138,7 +138,7 @@ bool cycle_graph(List** graph, int size,int* top_f,int*list_top,int count_f,int 
 
         } else c_graph[i] = graph[i];//se nao for loop apenas aponta pro mesmo sitio
     }
-    print_graph(c_graph,size);
+
     while(LIFO!=NULL){
         aux=remove_LIFO(&LIFO);
         if(check[aux]==1){//se o super no for fornecedor
