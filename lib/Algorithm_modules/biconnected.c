@@ -100,7 +100,7 @@ int articulation_bridge(List** ISP_graph,int* discovery_time,bool* discovered,in
     arestas = ISP_graph[vertice-1]; //voltar a analisar as arestas deste vertice
 
     while(arestas!=NULL){
-        if(ancient[arestas->vertices-1]>discovery_time[vertice-1]){ //se o tempo de descoberta do vertice em analise  for menor que a backedge de uma das suas subarvores,entao descobriu-se uma ponte e pode-se parar o algoritmo
+        if(ancient[arestas->vertices-1] >discovery_time[vertice-1]){ //se o tempo de descoberta do vertice em analise  for menor que a backedge de uma das suas subarvores,entao descobriu-se uma ponte e pode-se parar o algoritmo
             //guardar a ponte
             bridge[0]=arestas->vertices;
             bridge[1]=vertice;

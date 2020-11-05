@@ -278,6 +278,33 @@ lib/Algorithm_modules/biconnected.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.s
 .PHONY : lib/Algorithm_modules/biconnected.c.s
 
+lib/Graph_module/Heap.o: lib/Graph_module/Heap.c.o
+
+.PHONY : lib/Graph_module/Heap.o
+
+# target to build an object file
+lib/Graph_module/Heap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Heap.c.o
+.PHONY : lib/Graph_module/Heap.c.o
+
+lib/Graph_module/Heap.i: lib/Graph_module/Heap.c.i
+
+.PHONY : lib/Graph_module/Heap.i
+
+# target to preprocess a source file
+lib/Graph_module/Heap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Heap.c.i
+.PHONY : lib/Graph_module/Heap.c.i
+
+lib/Graph_module/Heap.s: lib/Graph_module/Heap.c.s
+
+.PHONY : lib/Graph_module/Heap.s
+
+# target to generate assembly for a file
+lib/Graph_module/Heap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Heap.c.s
+.PHONY : lib/Graph_module/Heap.c.s
+
 lib/Graph_module/ISPs.o: lib/Graph_module/ISPs.c.o
 
 .PHONY : lib/Graph_module/ISPs.o
@@ -437,6 +464,9 @@ help:
 	@echo "... lib/Algorithm_modules/biconnected.o"
 	@echo "... lib/Algorithm_modules/biconnected.i"
 	@echo "... lib/Algorithm_modules/biconnected.s"
+	@echo "... lib/Graph_module/Heap.o"
+	@echo "... lib/Graph_module/Heap.i"
+	@echo "... lib/Graph_module/Heap.s"
 	@echo "... lib/Graph_module/ISPs.o"
 	@echo "... lib/Graph_module/ISPs.i"
 	@echo "... lib/Graph_module/ISPs.s"

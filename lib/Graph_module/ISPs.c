@@ -51,18 +51,18 @@ List** read_ISP(FILE *fp_preview,FILE *fp,int *max_node_value,int **top_f,int **
 
 FILE* open_ISP(FILE* file_pointer,int argc,char const *argv[]){ //abre o ficheiro da rede
 
-    /*file_pointer=fopen("cicle.txt","r");
+    file_pointer=fopen("../lib/Assets/cicle.txt","r");
     if (file_pointer == NULL) {
         return (FILE *) EXIT_FAILURE;
-    }*/
-    if (argc != 2) {
+    }
+    /*if (argc != 2) {
         exit(0);
     }
 
     file_pointer = fopen(argv[1], "r"); //abrir o ficheiro a ser analisado
     if (file_pointer == NULL) {
         exit(0);
-    }
+    }*/
 
     return file_pointer;
 }
