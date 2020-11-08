@@ -3,7 +3,6 @@
 
 #include "lib/Graph_module/ISPs.h"
 #include "menus.h"
-#include "lib/Graph_module/Heap.h"
 
 int main(int argc,char const *argv[]) {
     FILE *fp_preview = NULL,*fp =NULL;  //inititalizacao de variaveis para tratamento do ficheiro
@@ -25,7 +24,6 @@ int main(int argc,char const *argv[]) {
 
     //abertura dos menus para processamento das escolhas do utilizador
     showInitMenu(ISP_graph,top_f,max_node_value,list_top,count_f,true_size);
-
 
     //libertação da memória alocada para o tratamento do problema
     free(parent);
