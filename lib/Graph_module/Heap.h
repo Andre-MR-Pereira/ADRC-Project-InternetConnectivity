@@ -13,7 +13,8 @@ void Fixdown(Heap* heap,int i, int n,int* index);
 int insertHeap(Heap* heap,int max,int* index,int new,int value);
 int removeHeap(Heap *heap, Heap *removed, int max,int* index);
 void printHeap(Heap*heap,int n);
-Heap* CreateUnit();
+Heap* createUnit();
 void setValue(Heap *heap, int n, int value, int* index);
 Heap* eraseHeap(Heap *heap);
+int isEmpty(Heap *heap);
 #endif //ADRC_PROJECT_INTERNETCONNECTIVITY_HEAP_H

@@ -19,23 +19,23 @@ void link_biconnected(List** ISP_graph,int max_node_value){
 
     int* bridge = (int*)calloc(2,sizeof(int));  //alocacao para memoria de uma potencial ponte
     if(bridge==NULL){
-        EXIT_FAILURE;
+        exit(EXIT_FAILURE);
     }
     int* discovery_time = (int*)malloc(max_node_value*sizeof(int)); //alocacao de memoria do vetor que ira guardas os tempos de descoberta de cada no
     if(discovery_time==NULL){
-        EXIT_FAILURE;
+        exit(EXIT_FAILURE);
     }
     bool* discovered = (bool*)malloc(max_node_value*sizeof(bool));  //alocacao de memoria do vetor que indica se um no ja foi descoberto pela DFS
     if(discovered==NULL){
-        EXIT_FAILURE;
+        exit(EXIT_FAILURE);
     }
     int* parent = (int*)malloc(max_node_value*sizeof(int)); //alocacao de memoria do vetor que ira indicar o parente de cada no descoberto na DFS
     if(parent==NULL){
-        EXIT_FAILURE;
+        exit(EXIT_FAILURE);
     }
     int* ancient = (int*)malloc(max_node_value*sizeof(int));    //alocacao de memoria do vetor que ira guardar o antecesor mais antigo que a subarvore em que o no se encontra se consegue ligar
     if(ancient==NULL){
-        EXIT_FAILURE;
+        exit(EXIT_FAILURE);
     }
 
     // Inicializar os vetores
