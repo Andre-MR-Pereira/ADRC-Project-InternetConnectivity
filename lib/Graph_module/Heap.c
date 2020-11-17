@@ -1,14 +1,12 @@
-//
-// Created by joped on 05/11/2020.
-//
-
 #include "Heap.h"
 #include <stdlib.h>
 #include <stdio.h>
+
 struct _Heap {
     int node;
     int value;
 };
+
 Heap* createHeap(int n){
     Heap* heap=(Heap*)malloc(sizeof(Heap)*n);
     for (int i = 0; i < n; ++i) {
@@ -38,6 +36,7 @@ void FixUp(Heap* heap,int n,int* index){
         n=(n-1)/2;
     }
 }
+
 void Fixdown(Heap* heap,int i, int n,int* index)
 {
     Heap trade;
@@ -109,6 +108,7 @@ Heap* eraseHeap(Heap *heap)
 
     return NULL;
 }
+
 int isEmpty(Heap *heap)
 {
     if(heap[0].value == -1)
