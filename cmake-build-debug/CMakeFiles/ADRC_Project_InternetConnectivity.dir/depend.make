@@ -9,6 +9,11 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.o: ../lib/Graph_module/Stacks.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Connected.c.o: ../lib/Graph_module/graph.h
 
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FastestDistrib.c.o: ../lib/Algorithm_modules/FastestDistrib.c
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FastestDistrib.c.o: ../lib/Algorithm_modules/FastestDistrib.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FastestDistrib.c.o: ../lib/Graph_module/Heap.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FastestDistrib.c.o: ../lib/Graph_module/graph.h
+
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FindCycles.c.o: ../lib/Algorithm_modules/Connected.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FindCycles.c.o: ../lib/Algorithm_modules/FindCycles.c
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FindCycles.c.o: ../lib/Algorithm_modules/FindCycles.h
@@ -56,6 +61,7 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/graph.c.o: ../
 
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/Connected.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/FindCycles.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/PathLength.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/PathType.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/Search.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/biconnected.h
@@ -68,6 +74,7 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../menus.h
 
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/Connected.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/FindCycles.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/PathLength.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/PathType.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/Search.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/biconnected.h

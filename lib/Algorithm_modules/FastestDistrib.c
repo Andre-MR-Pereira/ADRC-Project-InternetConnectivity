@@ -1,10 +1,7 @@
-//
-// Created by joped on 05/11/2020.
-//
-
 #include "FastestDistrib.h"
 #include <stdlib.h>
 #include <stdio.h>
+
 int* BigBoyDijkstra(List** graph, int node, int size)
 {
     int vertice,cvalue;

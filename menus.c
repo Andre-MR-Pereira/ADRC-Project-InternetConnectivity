@@ -5,6 +5,9 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
     int option = 0,source_node=0,destination_node=0;
     char path_mode;
     char** all_path_types;
+    // auxiliares para o pathLength
+    int result = 0;
+    int* length;
 
     while(true){
         printf("\n=================[Menu]=================\n---Please select one of the following---\n\n\n1.  Determine if input internet is connected.\n2.  Determine if input internet is linkbiconnected.\n3.  Determine if input internet is commercially acyclic.\n4.  Determine if input internet is comercially connected.\n\n=================[BGP]=================\n5.  Type of path elected.\n6.  Length of path elected.\n7.  Ya silvestre faz o que quiseres aqui.\n\n\n\n\n\n8.Exit\n\n");
@@ -82,7 +85,17 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     free(all_path_types);
                     break;
                 case 6:
-                    /*todo*/;
+                    printf("Source:\n");
+                    scanf("%d",&source_node);
+                    printf("Destination:\n");
+                    scanf("%d",&destination_node);
+                    length = lengths(ISP_graph, max_node_value, source_node, destination_node, &result);
+                    printf("Result: %d\n", result);
+                    printf("Lenghts:\n");
+                    for (int i = 0; i < max_node_value; ++i) {
+                        printf("Size (%d): %d\n", i, length[i]);
+                    }
+                    free(length);
                     break;
                 case 7:
                     /*todo*/;

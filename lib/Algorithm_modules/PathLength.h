@@ -8,6 +8,6 @@
 #include "../Graph_module/graph.h"
 #include "../Graph_module/Heap.h"
 
-
+int* lengths(List** , int , int , int , int* );
 
 #endif
