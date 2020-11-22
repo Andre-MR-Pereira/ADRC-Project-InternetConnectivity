@@ -33,7 +33,8 @@ int* BigBoyDijkstra(List** graph, int* cumulative, int node, int dest, int size)
 
     }
     Curr = createUnit();
-
+    r[0]=-1;
+    r[1]=-1;
     for (int i = 2; i>=0;i--) {
 
         while (!isEmpty(heap[i])) {
@@ -49,18 +50,18 @@ int* BigBoyDijkstra(List** graph, int* cumulative, int node, int dest, int size)
                 result[node] = cvalue;
                 cumulative[cvalue]++;
             }
-            if (node == dest) {
+            /*if (node == dest) {
                 r[0]=3-i;
                 r[1]=result[dest];
                 end=1;
                 break;
-            }
+            }*/
             arestas = graph[node];
-
             // Ciclo for que percorre os adjacentes do Current e, em caso válido, os insere no acervo
             while (arestas != NULL) {
                 vertice = arestas->vertices - 1;
                 edgea = arestas->edges - '0'-1;
+
                 if (index[edgea][vertice] == -2) {
                     arestas = arestas->next;
                     continue;
@@ -75,8 +76,9 @@ int* BigBoyDijkstra(List** graph, int* cumulative, int node, int dest, int size)
                     else if ((get_hvalue(heap[edgea], vertice)) <= (cvalue + 1)) {
                         arestas = arestas->next;
                         continue;
-                    } else
-                        setValue(heap[edgea], vertice, cvalue + 1, index[edgea]);
+                    } else {
+                        setValue(heap[edgea], index[edgea][vertice], cvalue + 1, index[edgea]);
+                    }
                 }
                 arestas = arestas->next;
             }
@@ -86,6 +88,10 @@ int* BigBoyDijkstra(List** graph, int* cumulative, int node, int dest, int size)
     for (int i = 0; i < 3; ++i) {
         free(index[i]);
         eraseHeap(heap[i]);
+    }
+    printf("\n");
+    for (int i = 0; i < size; ++i) {
+        printf("%i",result[i]);
     }
     free(hsize);
     free(index);

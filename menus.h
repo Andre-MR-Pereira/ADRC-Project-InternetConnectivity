@@ -11,6 +11,7 @@
 #include "lib/Algorithm_modules/PathType.h"
 #include "lib/Algorithm_modules/PathLength.h"
 #include "lib/Algorithm_modules/printFile.h"
+#include "lib/Algorithm_modules/FastestDistrib.h"
 
 #include <stdio.h>
 #include <stdlib.h>

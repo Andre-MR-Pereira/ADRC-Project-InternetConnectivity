@@ -7,7 +7,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
     char** all_path_types;
     // auxiliares para o pathLength
     int result = 0;
-    int* length;
+    int* length, *r=(int*)malloc(sizeof(int)*2);
 
     while(true){
         printf("\n=================[Menu]=================\n---Please select one of the following---\n\n\n1.  Determine if input internet is connected.\n2.  Determine if input internet is linkbiconnected.\n3.  Determine if input internet is commercially acyclic.\n4.  Determine if input internet is comercially connected.\n\n=================[BGP]=================\n5.  Type of path elected.\n6.  Length of path elected.\n7.  Ya silvestre faz o que quiseres aqui.\n\n\n\n\n\n8.Exit\n\n");
@@ -99,7 +99,21 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     free(length);
                     break;
                 case 7:
-                    /*todo*/;
+                    printf("Source:\n");
+                    scanf("%d",&source_node);
+                    printf("Destination:\n");
+                    scanf("%d",&destination_node);
+                    length=(int*)malloc(sizeof(int)*max_node_value);
+                    for (int i = 0; i < max_node_value; ++i) {
+                        length[i]=0;
+                    }
+                    r = BigBoyDijkstra(ISP_graph, length,destination_node,source_node,max_node_value);
+                    printf("Type: %d, Cost: %d\n", r[0],r[1]);
+                    for (int i = 0; i < max_node_value; ++i) {
+                        printf("%i",length[i]);
+                    }
+                    free(length);
+                    free(r);
                     break;
                 case 8: //se o utilizador introduzir o número 8 sai do programa
                     system("clear");
