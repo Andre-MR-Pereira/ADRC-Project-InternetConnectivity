@@ -10,6 +10,7 @@
 #include "lib/Algorithm_modules/FindCycles.h"
 #include "lib/Algorithm_modules/PathType.h"
 #include "lib/Algorithm_modules/PathLength.h"
+#include "lib/Algorithm_modules/printFile.h"
 
 #include <stdio.h>
 #include <stdlib.h>

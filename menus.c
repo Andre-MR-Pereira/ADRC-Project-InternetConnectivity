@@ -95,6 +95,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     for (int i = 0; i < max_node_value; ++i) {
                         printf("Size (%d): %d\n", i, length[i]);
                     }
+                    //printFile("lengths.txt", length, max_node_value);
                     free(length);
                     break;
                 case 7:
