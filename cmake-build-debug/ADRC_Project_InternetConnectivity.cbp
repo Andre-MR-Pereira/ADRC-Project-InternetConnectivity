@@ -124,6 +124,12 @@
 		<Unit filename="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/biconnected.h">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/printFile.c">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/printFile.h">
+			<Option target="ADRC_Project_InternetConnectivity"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Heap.c">
 			<Option target="ADRC_Project_InternetConnectivity"/>
 		</Unit>

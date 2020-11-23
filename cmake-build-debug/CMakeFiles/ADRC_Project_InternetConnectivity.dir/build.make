@@ -259,6 +259,19 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FastestDi
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FastestDistrib.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/FastestDistrib.c -o CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FastestDistrib.c.s
 
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.o: CMakeFiles/ADRC_Project_InternetConnectivity.dir/flags.make
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.o: ../lib/Algorithm_modules/printFile.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.o   -c /mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/printFile.c
+
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/printFile.c > CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.i
+
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/printFile.c -o CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.s
+
 # Object files for target ADRC_Project_InternetConnectivity
 ADRC_Project_InternetConnectivity_OBJECTS = \
 "CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o" \
@@ -274,7 +287,8 @@ ADRC_Project_InternetConnectivity_OBJECTS = \
 "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Heap.c.o" \
 "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathType.c.o" \
 "CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathLength.c.o" \
-"CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FastestDistrib.c.o"
+"CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FastestDistrib.c.o" \
+"CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.o"
 
 # External object files for target ADRC_Project_InternetConnectivity
 ADRC_Project_InternetConnectivity_EXTERNAL_OBJECTS =
@@ -293,9 +307,10 @@ ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathType.c.o
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathLength.c.o
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FastestDistrib.c.o
+ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.o
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/build.make
 ADRC_Project_InternetConnectivity: CMakeFiles/ADRC_Project_InternetConnectivity.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable ADRC_Project_InternetConnectivity"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C executable ADRC_Project_InternetConnectivity"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ADRC_Project_InternetConnectivity.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
