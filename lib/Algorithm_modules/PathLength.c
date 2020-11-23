@@ -22,7 +22,7 @@ int* lengths(List** graph, int max_node_value, int source, int destination, int*
             {3, 3, 3}
     };
 
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < max_node_value; i++) {
         if(graph[i] != NULL) {
             if(destination - 1 == i)
                 flag = true;
@@ -68,8 +68,9 @@ int* lengths(List** graph, int max_node_value, int source, int destination, int*
         }
     }
 
+    free(aux);
     free(index);
-    eraseHeap(heap);
+    heap = eraseHeap(heap);
 
     return length;
 }
