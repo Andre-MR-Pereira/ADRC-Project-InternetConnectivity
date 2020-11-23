@@ -90,7 +90,7 @@ int removeHeap(Heap *heap, Heap *removed, int max,int* index)
     trade = heap[0];
     heap[0] = heap[max];
     heap[max] = trade;
-
+    index[heap[0].node] = 0;
     Fixdown(heap, 0, max, index);
 
     return max;

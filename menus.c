@@ -3,11 +3,9 @@
 //Apresentação do menu inicial
 void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top,int count_f,int true_size) {
     int option = 0,source_node=0,destination_node=0;
-    char path_mode;
-    char** all_path_types;
-    // auxiliares para o pathLength
-    int result = 0;
-    int* length;
+    int amount_invalid=0;
+    int** all_path_types;
+    int* PD_path;
 
     while(true){
         printf("\n=================[Menu]=================\n---Please select one of the following---\n\n\n1.  Determine if input internet is connected.\n2.  Determine if input internet is linkbiconnected.\n3.  Determine if input internet is commercially acyclic.\n4.  Determine if input internet is comercially connected.\n\n=================[BGP]=================\n5.  Type of path elected.\n6.  Length of path elected.\n7.  Ya silvestre faz o que quiseres aqui.\n\n\n\n\n\n8.Exit\n\n");
@@ -41,61 +39,84 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     }
                     break;
                 case 5: //se o utilizador introduzir o numero 5, indica-se o tipo de caminho escolhido pelo BGP
-                    all_path_types=(char**)malloc(max_node_value*sizeof(char*));
-                    for(int i=0;i<max_node_value;i++){
-                        all_path_types[i]=(char*)malloc(max_node_value*sizeof(char));
+                    all_path_types=(int**)calloc(2,sizeof(int*));
+                    if(all_path_types==NULL){
+                        exit(EXIT_FAILURE);
+                    }
+                    for(int i=0;i<2;i++){
+                        all_path_types[i]=(int*)calloc(2,sizeof(int));
+                    }
+                    PD_path=(int*)calloc(4,sizeof(int));
+                    if(PD_path==NULL){
+                        exit(EXIT_FAILURE);
                     }
                     printf("\n Please choose a Source and Destination (in this order) node to find the path:\n");
                     printf("Source:");
                     scanf("%d",&source_node);
                     printf("Destination:");
                     scanf("%d",&destination_node);
-                    path_mode=path_type(ISP_graph,max_node_value,source_node,destination_node);
-                    printf("\n Answer: The path type will be ");
-                    switch(path_mode){
-                        case 'C':
-                            printf("CUSTOMER\n");
-                            break;
-                        case 'R':
-                            printf("PEER\n");
-                            break;
-                        case 'P':
-                            printf("PROVIDER\n");
-                            break;
-                        default:
-                            printf("INVALID\n");
-                            break;
-                    }
-                    for(int i=0;i<max_node_value;i++){
-                        for(int j=0;j<max_node_value;j++){
-                            path_mode=path_type(ISP_graph,max_node_value,i+1,j+1);
-                            all_path_types[i][j]=path_mode;
+                    if(cycle_graph(ISP_graph, max_node_value, top_f, list_top, count_f, true_size)==true){  //corre para ver se e comercially connected
+                        for(int i=0;i<max_node_value;i++){
+                            if(ISP_graph[i]!=NULL){
+                                path_type(ISP_graph,max_node_value,i+1,all_path_types,PD_path);
+                            }else{
+                                //amount_invalid++;
+                                //PD_path[0]=PD_path[0]+(2*max_node_value);
+                                //printf("Valor de %d\n",PD_path[0]);
+                            }
                         }
-                    }
-                    printf("From all to all:\n\n");
-                    for(int i=0;i<max_node_value;i++){
-                        for(int j=0;j<max_node_value;j++){
-                            printf("%c|",all_path_types[i][j]);
+                        PD_path[3]=(true_size*(true_size-1))-(PD_path[1]+PD_path[2]);
+                        printf("\n Answer: The path type will be ");
+                        for(int i=0;i<4;i++){
+                            printf("%d|",PD_path[i]);
                         }
                         printf("\n");
+                        /*switch(all_path_types[destination_node-1][source_node-1]){
+                            case 1:
+                                printf("CUSTOMER\n");
+                                break;
+                            case 2:
+                                printf("PEER\n");
+                                break;
+                            case 3:
+                                printf("PROVIDER\n");
+                                break;
+                            default:    //Se o caminho e do tipo 0
+                                printf("INVALID\n");
+                                break;
+                        }*/
+                        /*printf("From all to all:\n\n");
+                        for(int i=0;i<max_node_value;i++){
+                            for(int j=0;j<max_node_value;j++){
+                                switch(all_path_types[i][j]){
+                                    case 1:
+                                        path_mode='C';
+                                        break;
+                                    case 2:
+                                        path_mode='R';
+                                        break;
+                                    case 3:
+                                        path_mode='P';
+                                        break;
+                                    default:    //Se o caminho e do tipo 0
+                                        path_mode='I';
+                                        break;
+                                }
+                                printf("%c|",path_mode);
+                            }
+                            printf("\n");
+                        }*/
+                    }else{
+                        printf("\nAnswer: The input internet isn´t comercially connected, therefore we won´t compute the solution\n");
                     }
-                    for(int i=0;i<max_node_value;i++){
+                    for(int i=0;i<2;i++){
                         free(all_path_types[i]);
                     }
                     free(all_path_types);
+                    free(PD_path);
                     break;
                 case 6:
-                    printf("Source:\n");
-                    scanf("%d",&source_node);
-                    printf("Destination:\n");
-                    scanf("%d",&destination_node);
-                    length = lengths(ISP_graph, max_node_value, source_node, destination_node, &result);
-                    printf("Result: %d\n", result);
-                    printf("Lenghts:\n");
-                    for (int i = 0; i < max_node_value; ++i) {
-                        printf("Size (%d): %d\n", i, length[i]);
-                    }
-                    free(length);
+                    /*todo*/;
                     break;
                 case 7:
                     /*todo*/;
