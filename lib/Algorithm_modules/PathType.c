@@ -1,46 +1,37 @@
 #include "PathType.h"
 
-void path_type(List** ISP_graph,int max_node_value,int destination,int** all_path_types,int* PD_path){
-    Heap* queue;
+int path_type(List** ISP_graph,int max_node_value,int destination,int* PD_path,int source_node){
+    Stack* prio_c=NULL;
+    Stack* prio_r=NULL;
+    int path_type;
 
     int* index=(int*)malloc(max_node_value*sizeof(int));
     if(index==NULL){
         exit(EXIT_FAILURE);
     }
-    int* path=(int*)calloc(max_node_value,sizeof(int));
-    if(path==NULL){
-        exit(EXIT_FAILURE);
-    }
-    queue=createHeap(max_node_value);   //criacao da queue para escolha do caminho na dijktra
 
     // Inicializar os vetores
     for (int i = 0; i < max_node_value; i++) {
         index[i]=-1;    //inicializar todos os nos como por descobrir
-        if(ISP_graph[i]!=NULL){ //caso o no exista
-            //all_path_types[destination-1][i]=3; //inicializar todos os caminhos como tipo provider
-            path[i]=3;
-        }  //caso nao exista ja esta marcado como invalido
     }
-    path[destination-1]=1;
-    //all_path_types[destination-1][destination-1]=1; //inicializar todos os caminhos como tipo provider
-    //printf("Estamos no no %d\n",destination);
-    BGP_dijkstra(ISP_graph,destination,queue,index,all_path_types,PD_path,path); //aplicar dijkstra de um no para todos
 
+    path_type=BGP_dijkstra(ISP_graph,source_node,destination,index,PD_path,prio_c,prio_r); //aplicar dijkstra de um no para todos
     //libertacao da memoria alocada
     free(index);
-    free(path);
-    queue=eraseHeap(queue);
+
+    return path_type;
 }
 
-void BGP_dijkstra(List** ISP_graph,int destination,Heap* queue,int* index,int** all_path_types,int* PD_path,int* path){
-    int heap_max=0,node,value;
+int BGP_dijkstra(List** ISP_graph,int source_node,int destination,int* index,int* PD_path,Stack* prio_c,Stack* prio_r){
+    int node,value;
     int char_to_int;
-    Heap* remove;
     List* aux;
+    Stack* element;
+    int vertice;
+    int path_type=3;
 
     int comparison_matrix[3][3];    //matriz de caminhos
 
-    remove=createUnit();    //no para ajudar na remoçao de pontos da queue
 
     //criacao de matriz de ajuda a decisao do tipo de caminho(1-customer,2-peer,3-provider,4-invalid)
     comparison_matrix[0][0]=1;
@@ -53,39 +44,44 @@ void BGP_dijkstra(List** ISP_graph,int destination,Heap* queue,int* index,int** 
     comparison_matrix[2][1]=3;
     comparison_matrix[2][2]=3;
 
-    heap_max=insertHeap(queue,heap_max,index,destination-1,1);  //insere o no inicial a ser analisado
-    while(heap_max>0){
-        node=get_hnode(queue,0);    //no a ser analisado
-        value=get_hvalue(queue,0);  //tipo de caminho para chegar ao no
-        heap_max=removeHeap(queue,remove,heap_max,index);   //remove o no a ser analisado da queue
+    element=create_element(destination-1);
+    prio_c=push_LIFO(prio_c,element);
+    while(prio_c!=NULL || prio_r!=NULL){
+        if(prio_c!=NULL){
+            node=remove_LIFO(&prio_c);
+            value=1;
+        }else{
+            node=remove_LIFO(&prio_r);
+            if(index[node]==-2 && prio_r!=NULL){
+                continue;
+            }
+            value=2;
+        }
+        if(node==source_node-1){
+            path_type=value;
+        }
         index[node]=-2; //marca o no como visitado
         aux=ISP_graph[node];    //prepara para analisar os nos adjacentes
-        switch (path[node]) {
-            case 1:
-                PD_path[1]++;
-                break;
-            case 2:
-                PD_path[2]++;
-                break;
-            default:
-                printf("Isto nao devia acontecer\n");
-                break;
-        }
+        PD_path[value]++;
         while(aux!=NULL){
+            vertice=aux->vertices-1;
             char_to_int=-(aux->edges-'4');  //converte o tipo de ligacao de char para int e aplica a prioridade
-            if(index[aux->vertices-1]==-1 && comparison_matrix[char_to_int-1][value-1]!=3){ //se o no nao foi descoberto e o tipo de caminho nao e provider
-                heap_max=insertHeap(queue,heap_max,index,aux->vertices-1,char_to_int);
-                //all_path_types[destination-1][aux->vertices-1]=comparison_matrix[char_to_int-1][value-1];  //guardar o pior caminho para chegar a esse no
-                path[aux->vertices-1]=comparison_matrix[char_to_int-1][value-1];
-            }else if(index[aux->vertices-1]!=-1 && index[aux->vertices-1]!=-2 && comparison_matrix[char_to_int-1][value-1]!=3){   //se o no nao foi descoberto (e visitado) mas ainda esta na queue e o tipo de caminho nao e provider
-                if(char_to_int<get_hvalue(queue,index[aux->vertices-1])){
-                    setValue(queue,index[aux->vertices-1],char_to_int,index);
-                    //all_path_types[destination-1][aux->vertices-1]=comparison_matrix[char_to_int-1][value-1];  //guardar o pior caminho para chegar a esse no
-                    path[aux->vertices-1]=comparison_matrix[char_to_int-1][value-1];
+            if(index[vertice]==-1 && comparison_matrix[char_to_int-1][value-1]!=3){ //se o no nao foi descoberto e o tipo de caminho nao e provider
+                element=create_element(vertice);
+                if(char_to_int==1){
+                    prio_c=push_LIFO(prio_c,element);
+                    index[vertice]=1;
+                }else{
+                    prio_r=push_LIFO(prio_r,element);
+                    index[vertice]=2;
                 }
+            }else if(index[vertice]==2 && comparison_matrix[char_to_int-1][value-1]==1){   //se o no nao foi descoberto (e visitado) mas ainda esta na queue e o tipo de caminho nao e provider
+                element=create_element(vertice);
+                prio_c=push_LIFO(prio_c,element);
+                index[vertice]=1;
             }
             aux=aux->next;
         }
     }
-    remove=eraseHeap(remove);
+    return path_type;
 }

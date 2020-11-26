@@ -29,6 +29,7 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathLengt
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathType.c.o: ../lib/Algorithm_modules/PathType.c
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathType.c.o: ../lib/Algorithm_modules/PathType.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathType.c.o: ../lib/Graph_module/Heap.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathType.c.o: ../lib/Graph_module/Stacks.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathType.c.o: ../lib/Graph_module/graph.h
 
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/Search.c.o: ../lib/Algorithm_modules/Search.c
@@ -46,6 +47,9 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnect
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.o: ../lib/Graph_module/Stacks.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/biconnected.c.o: ../lib/Graph_module/graph.h
 
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.o: ../lib/Algorithm_modules/printFile.c
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/printFile.c.o: ../lib/Algorithm_modules/printFile.h
+
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Heap.c.o: ../lib/Graph_module/Heap.c
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/Heap.c.o: ../lib/Graph_module/Heap.h
 
@@ -60,11 +64,13 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/graph.c.o: ../
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Graph_module/graph.c.o: ../lib/Graph_module/graph.h
 
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/Connected.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/FastestDistrib.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/FindCycles.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/PathLength.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/PathType.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/Search.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/biconnected.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Algorithm_modules/printFile.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Graph_module/Heap.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Graph_module/ISPs.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../lib/Graph_module/Stacks.h
@@ -73,11 +79,13 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../main.c
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/main.c.o: ../menus.h
 
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/Connected.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/FastestDistrib.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/FindCycles.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/PathLength.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/PathType.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/Search.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/biconnected.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Algorithm_modules/printFile.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Graph_module/Heap.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Graph_module/ISPs.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/menus.c.o: ../lib/Graph_module/Stacks.h

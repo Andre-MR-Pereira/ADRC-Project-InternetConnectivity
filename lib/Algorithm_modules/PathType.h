@@ -7,8 +7,9 @@
 
 #include "../Graph_module/graph.h"
 #include "../Graph_module/Heap.h"
+#include "../Graph_module/Stacks.h"
 
-void path_type(List**,int,int,int**,int*);
-void BGP_dijkstra(List**,int,Heap*,int*,int**,int*,int*);
+int path_type(List**,int,int,int*,int);
+int BGP_dijkstra(List**,int,int,int*,int*,Stack*,Stack*);
 
 #endif
