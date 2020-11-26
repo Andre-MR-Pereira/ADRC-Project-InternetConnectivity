@@ -5,7 +5,7 @@ int path_type(List** ISP_graph,int max_node_value,int destination,int* PD_path,i
     Stack* prio_r=NULL;
     int path_type;
 
-    int* index=(int*)malloc(max_node_value*sizeof(int));
+    int* index=(int*)malloc(max_node_value*sizeof(int));    //vetor que guarda o estado de cada no | -2:retirado; -1:por descobrir; 1,2 ou 3: tipo de caminho associado para chegar a esse no
     if(index==NULL){
         exit(EXIT_FAILURE);
     }
@@ -44,44 +44,45 @@ int BGP_dijkstra(List** ISP_graph,int source_node,int destination,int* index,int
     comparison_matrix[2][1]=3;
     comparison_matrix[2][2]=3;
 
+    //adiciona o no inicial para ser analisado
     element=create_element(destination-1);
     prio_c=push_LIFO(prio_c,element);
-    while(prio_c!=NULL || prio_r!=NULL){
-        if(prio_c!=NULL){
-            node=remove_LIFO(&prio_c);
-            value=1;
-        }else{
-            node=remove_LIFO(&prio_r);
-            if(index[node]==-2 && prio_r!=NULL){
-                continue;
+    while(prio_c!=NULL || prio_r!=NULL){    //enquanto as stacks associadas a possiveis nos com caminho do tipo C ou R ainda estao com elementos
+        if(prio_c!=NULL){   //se a stack tiver potenciais nos com caminho de tipo C retirar esses primeiro
+            node=remove_LIFO(&prio_c);  //guardar o no retirado
+            value=1;    //guardar o caminho ate esse no como sendo do tipo C
+        }else{  //senao remover da stack com nos potencialmente do tipo R
+            node=remove_LIFO(&prio_r);  //retirar o no
+            if(index[node]==-2 && prio_r!=NULL){    //caso o no ja tenha sido retirado ou a lista ainda tenha mais nos por analisar
+                continue;   //voltar ao inicio do ciclo while
             }
-            value=2;
+            value=2;    //guardar o caminho ate esse no como sendo do tipo R
         }
-        if(node==source_node-1){
-            path_type=value;
+        if(node==source_node-1){    //caso seja o no de source
+            path_type=value;    //guardar o valor para apresentar
         }
         index[node]=-2; //marca o no como visitado
         aux=ISP_graph[node];    //prepara para analisar os nos adjacentes
-        PD_path[value]++;
-        while(aux!=NULL){
-            vertice=aux->vertices-1;
+        PD_path[value]++;   //incrementa a contagem desse tipo de caminho
+        while(aux!=NULL){   //enquanto existirem nos por visitar
+            vertice=aux->vertices-1;    //guarda o no a analisar
             char_to_int=-(aux->edges-'4');  //converte o tipo de ligacao de char para int e aplica a prioridade
             if(index[vertice]==-1 && comparison_matrix[char_to_int-1][value-1]!=3){ //se o no nao foi descoberto e o tipo de caminho nao e provider
-                element=create_element(vertice);
-                if(char_to_int==1){
-                    prio_c=push_LIFO(prio_c,element);
-                    index[vertice]=1;
-                }else{
-                    prio_r=push_LIFO(prio_r,element);
-                    index[vertice]=2;
+                element=create_element(vertice);    //guardar o tipo de caminho
+                if(char_to_int==1){ //caso seja do tipo C
+                    prio_c=push_LIFO(prio_c,element);   //colocar na stack
+                    index[vertice]=1;   //indicar o tipo de caminho possivelmente associado
+                }else{ //caso seja do tipo R
+                    prio_r=push_LIFO(prio_r,element);   //colocar na stack
+                    index[vertice]=2;   //indicar o tipo de caminho possivelmente associado
                 }
-            }else if(index[vertice]==2 && comparison_matrix[char_to_int-1][value-1]==1){   //se o no nao foi descoberto (e visitado) mas ainda esta na queue e o tipo de caminho nao e provider
-                element=create_element(vertice);
-                prio_c=push_LIFO(prio_c,element);
-                index[vertice]=1;
+            }else if(index[vertice]==2 && comparison_matrix[char_to_int-1][value-1]==1){   //se o no se encontra na stack de cainhos tipo R e foi descoberto um caminho para si do tipo C
+                element=create_element(vertice);    //guardar o tipo de caminho
+                prio_c=push_LIFO(prio_c,element);   //colocar na stack
+                index[vertice]=1;   //indicar o tipo de caminho possivelmente associado
             }
-            aux=aux->next;
+            aux=aux->next;  //iterar sobre os nos a visitar
         }
     }
-    return path_type;
+    return path_type;   //retorna o tipo de caminho do no pretendido
 }

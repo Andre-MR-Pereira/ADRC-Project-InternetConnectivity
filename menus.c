@@ -43,24 +43,24 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     }
                     break;
                 case 5: //se o utilizador introduzir o numero 5, indica-se o tipo de caminho escolhido pelo BGP
-                    PD_path=(int*)calloc(4,sizeof(int));
+                    PD_path=(int*)calloc(4,sizeof(int));    //vetor para calculo da distribuicao de probabilidades de cada caminho
                     if(PD_path==NULL){
                         exit(EXIT_FAILURE);
                     }
-                    source_node=1;
-                    destination_node=1;
+                    source_node=1;  //reset das variaveis
+                    destination_node=1;  //reset das variaveis
                     if(cycle_graph(ISP_graph, max_node_value, top_f, list_top, count_f, true_size)==true){  //corre para ver se e comercially connected
                         printf("\n\n1.  From a source to a destination.\n2.  From all to all.\n");
-                        scanf("%d",&option);
+                        scanf("%d",&option);    //guarda a opcao do utilizador
                         if(option==1){
                             printf("\n Please choose a Source and Destination (in this order) node to find the path:\n");
                             printf("Source:");
                             scanf("%d",&source_node);
                             printf("Destination:");
                             scanf("%d",&destination_node);
-                            if(ISP_graph[destination_node-1]!=NULL && ISP_graph[source_node-1]!=NULL){
-                                result=path_type(ISP_graph,max_node_value,destination_node,PD_path,source_node);
-                                printf("Answer: The path type will be ");
+                            if(ISP_graph[destination_node-1]!=NULL && ISP_graph[source_node-1]!=NULL){  //caso nenhum dos nos seja invalido
+                                result=path_type(ISP_graph,max_node_value,destination_node,PD_path,source_node);    //calculo do tipo de caminho
+                                printf("Answer: The path type will be ");   //formatacao da resposta
                                 switch (result) {
                                     case 1:
                                       printf("Customer");
@@ -75,17 +75,17 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                                         printf("Invalid");
                                 }
                             }else{
-                                printf("Answer: The node you picked wasn´t available.\n");
+                                printf("Answer: The node you picked wasn´t available.\n");  //indicar que o no e invalido
                             }
                         }else{
                             printf("Running all to all:\n");
-                            for(int i=0;i<max_node_value;i++){
-                                if(ISP_graph[i]!=NULL){
-                                    result=path_type(ISP_graph,max_node_value,i+1,PD_path,source_node);
+                            for(int i=0;i<max_node_value;i++){  //fazer dijkstra de um no para todos
+                                if(ISP_graph[i]!=NULL){ //caso o no faca parte da rede
+                                    result=path_type(ISP_graph,max_node_value,i+1,PD_path,source_node); //calculo do tipo de caminho e da PD
                                 }
                             }
-                            PD_path[3]=(true_size*(true_size-1))-(PD_path[1]+PD_path[2]);
-                            printf("\n Answer: The path type will be ");
+                            PD_path[3]=(true_size*(true_size-1))-(PD_path[1]+PD_path[2]);   //calculo do tipo de caminhos provider
+                            printf("\n Answer: The path type will be ");    //formatacao resposta
                             for(int i=0;i<4;i++){
                                 printf("%d|",PD_path[i]);
                             }
@@ -95,7 +95,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     }else{
                         printf("\nAnswer: The input internet isn´t comercially connected, therefore we won´t compute the solution\n");
                     }
-                    free(PD_path);
+                    free(PD_path);  //libertacao memoria alocada
                     break;
                 case 6: // Length do caminho produzido pelo BGP
                     printf("\n\n(1) From a source to a destination\n(Any other number) All to all (can take a while!!)\n");

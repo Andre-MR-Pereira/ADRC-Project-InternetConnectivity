@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "../CMakeLists.txt"
+  "/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/CMakeLists.txt"
   "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeSystem.cmake"
   "/usr/local/share/cmake-3.17/Modules/CMakeCCompiler.cmake.in"
