@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/PathType.c
+PathType.h
+/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/PathType.h
+
+/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Algorithm_modules/PathType.h
+stdlib.h
+-
+stdio.h
+-
+stdbool.h
+-
+../Graph_module/graph.h
+/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+../Graph_module/Heap.h
+/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Heap.h
+../Graph_module/Stacks.h
+/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+
+/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Heap.h
+
+/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/Stacks.h
+
+/mnt/c/Users/ASUS/Documents/faculdade/4_ano/1ºsemestre/ADRC/ADRC-Project-InternetConnectivity/lib/Graph_module/graph.h
+
