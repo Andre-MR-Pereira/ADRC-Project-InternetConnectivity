@@ -7,7 +7,9 @@
 
 #include "../Graph_module/graph.h"
 #include "../Graph_module/Heap.h"
+#include "../Graph_module/Stacks.h"
 
-int* lengths(List** , int , int , int , int* );
+int* lengths(List** , int);
+int single_length(List**, int, int, int);
 
 #endif
