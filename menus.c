@@ -10,6 +10,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
     int result = 0;
     int* length;
     int opt, opt1;
+    int type=0, * r;
 
     while(true){
         printf("\n=================[Menu]=================\n---Please select one of the following---\n\n\n1.  Determine if input internet is connected.\n2.  Determine if input internet is linkbiconnected.\n3.  Determine if input internet is commercially acyclic.\n4.  Determine if input internet is comercially connected.\n\n=================[BGP]=================\n5.  Type of path elected.\n6.  Length of path elected.\n7.  Ya silvestre faz o que quiseres aqui.\n\n\n\n\n\n8.Exit\n\n");
@@ -127,21 +128,29 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     }
                     break;
                 case 7:
-                    printf("Source:\n");
-                    scanf("%d",&source_node);
-                    printf("Destination:\n");
-                    scanf("%d",&destination_node);
+                    type=0;
+                    printf("1:From all to all\n2:Source-Destination\n");
                     length=(int*)malloc(sizeof(int)*max_node_value);
-                    for (int i = 0; i < max_node_value; ++i) {
-                        length[i]=0;
+                    scanf("%d",&type);
+                    if(type==2){
+                        printf("Source:\n");
+                        scanf("%d",&source_node);
+                        printf("Destination:\n");
+                        scanf("%d",&destination_node);
+                        r=BigBoyDijkstra(ISP_graph, length,r,destination_node,source_node,max_node_value);
+                        printf("Type: %d, Cost: %d\n", r[0],r[1]);
+                        free(r);
                     }
-                    //r = BigBoyDijkstra(ISP_graph, length,destination_node,source_node,max_node_value);
-                    //printf("Type: %d, Cost: %d\n", r[0],r[1]);
-                    for (int i = 0; i < max_node_value; ++i) {
-                        printf("%i",length[i]);
+                    else if(type==1){
+                        for(int i=0;i<max_node_value;i++){
+                            if(ISP_graph[i] != NULL)
+                                BigBoyDijkstra(ISP_graph, length,r,i+1,source_node,max_node_value);
+                        }
+                        printFile("lengths.txt", length, max_node_value);
                     }
                     free(length);
                     break;
+
                 case 8: //se o utilizador introduzir o número 8 sai do programa
                     system("clear");
                     return;
