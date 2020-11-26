@@ -24,6 +24,7 @@ CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/FindCycle
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathLength.c.o: ../lib/Algorithm_modules/PathLength.c
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathLength.c.o: ../lib/Algorithm_modules/PathLength.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathLength.c.o: ../lib/Graph_module/Heap.h
+CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathLength.c.o: ../lib/Graph_module/Stacks.h
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathLength.c.o: ../lib/Graph_module/graph.h
 
 CMakeFiles/ADRC_Project_InternetConnectivity.dir/lib/Algorithm_modules/PathType.c.o: ../lib/Algorithm_modules/PathType.c

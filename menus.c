@@ -9,6 +9,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
     // auxiliares para o pathLength
     int result = 0;
     int* length;
+    int opt, opt1;
 
     while(true){
         printf("\n=================[Menu]=================\n---Please select one of the following---\n\n\n1.  Determine if input internet is connected.\n2.  Determine if input internet is linkbiconnected.\n3.  Determine if input internet is commercially acyclic.\n4.  Determine if input internet is comercially connected.\n\n=================[BGP]=================\n5.  Type of path elected.\n6.  Length of path elected.\n7.  Ya silvestre faz o que quiseres aqui.\n\n\n\n\n\n8.Exit\n\n");
@@ -96,19 +97,34 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     }
                     free(PD_path);
                     break;
-                case 6:
-                    printf("Source:\n");
-                    scanf("%d",&source_node);
-                    printf("Destination:\n");
-                    scanf("%d",&destination_node);
-                    length = lengths(ISP_graph, max_node_value, source_node, destination_node, &result);
-                    printf("Result: %d\n", result);
-                    printf("Lenghts:\n");
-                    for (int i = 0; i < max_node_value; ++i) {
-                        printf("Size (%d): %d\n", i, length[i]);
+                case 6: // Length do caminho produzido pelo BGP
+                    printf("\n\n(1) From a source to a destination\n(Any other number) All to all (can take a while!!)\n");
+                    scanf("%d", &opt);
+                    switch (opt) {
+                        case 1:
+                            printf("Source:");
+                            scanf("%d",&source_node);
+                            printf("Destination:");
+                            scanf("%d",&destination_node);
+                            result = single_length(ISP_graph, max_node_value, destination_node, source_node);
+                            printf("\nAnswer: %d\n", result);
+                            break;
+                        default:
+                            length = lengths(ISP_graph, max_node_value);
+                            printf("Lenghts:\n");
+                            for (int i = 0; i < max_node_value; ++i) {
+                                printf("Size (%d): %d\n", i, length[i]);
+                                if(i == 40){
+                                    printf("*PRESS (1) TO EXIT TO MENU*\n *PRESS ANY OTHER NUMBER TO SEE THE REST OF THE LENGTHS*\n");
+                                    scanf("%d", &opt1);
+                                    if(opt1 == 1)
+                                        break;
+                                }
+                            }
+                            free(length);
+                            scanf("%d", &opt1);
+                            break;
                     }
-                    //printFile("lengths.txt", length, max_node_value);
-                    free(length);
                     break;
                 case 7:
                     printf("Source:\n");
