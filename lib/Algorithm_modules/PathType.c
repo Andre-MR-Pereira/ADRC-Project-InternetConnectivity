@@ -97,7 +97,7 @@ int BGP_dijkstra_not_connected(List** ISP_graph,int source_node,int destination,
     List* aux;
     Stack* element;
     int vertice;
-    int path_type=3;
+    int path_type=4;
     Stack* prio_p=NULL; //stack para nos do tipo P
 
     int comparison_matrix[3][3];    //matriz de caminhos
