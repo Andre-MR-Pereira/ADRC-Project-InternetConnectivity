@@ -60,7 +60,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                             printf("Destination:");
                             scanf("%d",&destination_node);
                             if(ISP_graph[destination_node-1]!=NULL && ISP_graph[source_node-1]!=NULL){  //caso nenhum dos nos seja invalido
-                                result=path_type(ISP_graph,max_node_value,destination_node,PD_path,source_node);    //calculo do tipo de caminho
+                                result=path_type(ISP_graph,max_node_value,destination_node,PD_path,source_node,1);    //calculo do tipo de caminho
                                 printf("Answer: The path type will be ");   //formatacao da resposta
                                 switch (result) {
                                     case 1:
@@ -82,10 +82,10 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                             printf("Running all to all:\n");
                             for(int i=0;i<max_node_value;i++){  //fazer dijkstra de um no para todos
                                 if(ISP_graph[i]!=NULL){ //caso o no faca parte da rede
-                                    result=path_type(ISP_graph,max_node_value,i+1,PD_path,source_node); //calculo do tipo de caminho e da PD
+                                    result=path_type(ISP_graph,max_node_value,i+1,PD_path,source_node,1); //calculo do tipo de caminho e da PD
                                 }
                             }
-                            PD_path[3]=(true_size*(true_size-1))-(PD_path[1]+PD_path[2]);   //calculo do tipo de caminhos provider
+                            PD_path[3]=(true_size*(true_size))-(PD_path[1]+PD_path[2]);   //calculo do tipo de caminhos provider
                             printf("\n Answer: The path type will be ");    //formatacao resposta
                             for(int i=0;i<4;i++){
                                 printf("%d|",PD_path[i]);
@@ -94,7 +94,48 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                         }
 
                     }else{
-                        printf("\nAnswer: The input internet isn´t comercially connected, therefore we won´t compute the solution\n");
+                        printf("\n\n1.  From a source to a destination.\n2.  From all to all.\n");
+                        scanf("%d",&option);    //guarda a opcao do utilizador
+                        if(option==1){
+                            printf("\n Please choose a Source and Destination (in this order) node to find the path:\n");
+                            printf("Source:");
+                            scanf("%d",&source_node);
+                            printf("Destination:");
+                            scanf("%d",&destination_node);
+                            if(ISP_graph[destination_node-1]!=NULL && ISP_graph[source_node-1]!=NULL){  //caso nenhum dos nos seja invalido
+                                result=path_type(ISP_graph,max_node_value,destination_node,PD_path,source_node,2);    //calculo do tipo de caminho
+                                printf("Answer: The path type will be ");   //formatacao da resposta
+                                switch (result) {
+                                    case 1:
+                                        printf("Customer");
+                                        break;
+                                    case 2:
+                                        printf("Peer");
+                                        break;
+                                    case 3:
+                                        printf("Provider");
+                                        break;
+                                    default:
+                                        printf("Invalid");
+                                }
+                            }else{
+                                printf("Answer: The node you picked wasn´t available.\n");  //indicar que o no e invalido
+                            }
+                        }else {
+                            printf("Running all to all:\n");
+                            for (int i = 0; i < max_node_value; i++) {  //fazer dijkstra de um no para todos
+                                if (ISP_graph[i] != NULL) { //caso o no faca parte da rede
+                                    result = path_type(ISP_graph, max_node_value, i + 1, PD_path,
+                                                       source_node,2); //calculo do tipo de caminho e da PD
+                                }
+                            }
+                            printf("\n Answer: The path type will be ");    //formatacao resposta
+                            PD_path[0]=(true_size*(true_size))-(PD_path[1]+PD_path[2]+PD_path[3]);
+                            for (int i = 0; i < 4; i++) {
+                                printf("%d|", PD_path[i]);
+                            }
+                            printf("\n");
+                        }
                     }
                     free(PD_path);  //libertacao memoria alocada
                     break;
