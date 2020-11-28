@@ -155,7 +155,12 @@ int* lengths(List** graph, int max_node_value)
 // Utilização do algoritmo acima, apenas de uma source para um destino
 int single_length(List** graph, int max_node_value, int dest, int source)
 {
-    int result = 0;
+    // Verifica se os nós selecionados existem
+    if(dest > max_node_value || source > max_node_value)
+        return -1;
+    if(graph[dest-1] == NULL || graph[source-1] == NULL)
+        return -1;
+    int result = -1;
     Heap* heap = createHeap(max_node_value); // Cria a heap
     int* index = (int*) malloc(max_node_value*sizeof(int)); // Tem o índice de cada nó na Heap
     if(index == NULL)

@@ -13,7 +13,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
     int type=0, * r;
 
     while(true){
-        printf("\n=================[Menu]=================\n---Please select one of the following---\n\n\n1.  Determine if input internet is connected.\n2.  Determine if input internet is linkbiconnected.\n3.  Determine if input internet is commercially acyclic.\n4.  Determine if input internet is comercially connected.\n\n=================[BGP]=================\n5.  Type of path elected.\n6.  Length of path elected.\n7.  Ya silvestre faz o que quiseres aqui.\n\n\n\n\n\n8.Exit\n\n");
+        printf("\n=================[Menu]=================\n---Please select one of the following---\n\n\n1.  Determine if input internet is connected.\n2.  Determine if input internet is linkbiconnected.\n3.  Determine if input internet is commercially acyclic.\n4.  Determine if input internet is comercially connected.\n\n=================[BGP]=================\n5.  Type of path elected.\n6.  Length of path elected.\n7.  Smallest length of path with the same type.\n\n\n\n\n\n8.Exit\n\n");
         //lê qual opção o utilizador escolheu
         scanf("%d",&option);
 
@@ -140,7 +140,7 @@ void showInitMenu (List** ISP_graph,int* top_f, int max_node_value,int* list_top
                     free(PD_path);  //libertacao memoria alocada
                     break;
                 case 6: // Length do caminho produzido pelo BGP
-                    printf("\n\n(1) From a source to a destination\n(Any other number) All to all (can take a while!!)\n");
+                    printf("\n\n(1) From a source to a destination (-1 if length isn't found)\n(Any other number) All to all (can take a while!!)\n");
                     scanf("%d", &opt);
                     switch (opt) {
                         case 1:
